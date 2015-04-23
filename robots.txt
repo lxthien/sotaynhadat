@@ -1,0 +1,7 @@
+# robots.txt for http://sotaynhadat.vn/
+
+User-agent: *
+Disallow: /admin
+Disallow: /cms/single-page
+Disallow: /cms
+
