@@ -1,0 +1,182 @@
+/**
+ * Css continue 02-06-2015
+ */
+
+.cl{clear: both;}
+
+.linkdautrang a {color:#000000; float:left; padding:5px 8px; margin-right: 3px;}
+.linkdautrang a:hover {color:#FFFFFF; background-color:#109502; float:left; padding:5px 8px; border-radius: 4px;}
+.linkdautrang a.linkdautrang-active{background-color:#109502;border-radius: 4px; color: #ffffff;}
+
+.textthanhvien a {font-size:14px; color:#FFFFFF; font-weight:lighter;}
+.textthanhvien a:hover { font-size:14px; color:#FFFFFF; text-decoration:underline; font-weight:lighter;}
+.textthanhvien2 a {font-size:14px; color:#1a1a1a; font-weight:lighter;}
+.textthanhvien2 a:hover { font-size:14px; color:#1a1a1a; text-decoration:underline; font-weight:lighter;}
+
+/* trang tin tuc,camnang,duan,nhadatban,nhadatchothue,nhucaunhadat*/
+.boxhinhlon { width:262px; height:221px; margin-left:20px; margin-top:10px; border:1px #999 solid; float:left;}
+.boxhinhlon img { margin-left:1px; margin-top:1px; height:219px; float:left;}
+.tieudenoibat a {width:297px; height:20px; float:left; color:#333333; font-size:16px; font-weight:bold;}
+.tieudenoibat a:hover {width:297px; float:left; color:#0078cc;font-size:16px; font-weight:bold;}
+.tieudenoibat2 a {width:380px; height:20px; float:left; color:#333333; font-size:17px; font-weight:bold;}
+.tieudenoibat2 a:hover {width:380px; height:20px; float:left; color:#061c93;font-size:17px; font-weight:bold; }
+.tieudenoibat3 a {width:380px; height:20px; float:left; color:#0078cc;font-size:14px; font-weight:bold;}
+.tieudenoibat3 a:hover {width:380px; height:20px; float:left; color:#086FB8;font-size:14px; font-weight:bold;}
+.icon4{background:url(../icon2.png); height:5px; width:5px; float:left; margin-left:5px; margin-right:5px; margin-top:2px;}
+.noidungtinnoibat a {color:#333333;width:280px; height:30px; float:left;}
+.noidungtinnoibat a:hover {color:#0078cc;width:280px; height:30px; float:left;}
+.noidungtinnoibat2 a {color:#333333;width:280px; height:30px; float:left;}
+.noidungtinnoibat2 a:hover {color:#028287;width:280px; height:30px; float:left;}
+.noidungnoibat{width:285px; margin-bottom:10px; float:left; margin-top:15px; margin-left:2px; font-size:12px; color:#333333;}
+.tinthitruong{background:url(../titlenew.png) repeat-x; width:580px; height:38px; margin-left:15px;float:left; margin-bottom:5px;}
+
+.tinthitruong2{background:url(../titlenew2.png); width:580px; height:38px; margin-left:15px;float:left; margin-bottom:15px;}
+.tinthitruong3{background:url(../titlenew3.png); width:556px; height:38px; margin-left:15px;float:left; margin-bottom:15px;}
+
+.hinhthitruong { width:120px; height:100px;  float:left;  border:1px #999999 solid;}
+.hinhthitruong img { width:118px; height:98px; float:left; margin-left:1px; margin-top:1px; }
+.tieudethitruong a {width:135px;  float:left; margin-left:10px;color:#333333; font-size:13px; font-weight:bold;    }
+.tieudethitruong a:hover {width:135px; float:left; margin-left:10px; color:#028287;font-size:13px; font-weight:bold; }
+.contentthitruong{width:265px; float:left; margin-bottom:10px; margin-top:10px;  font-size:12px;color:#333333;}
+
+
+.danhmuctintuc{width:161px;  float:right;border: 1px #CCCCCC  solid;background-color:#FFFFFF; padding-bottom:5px; margin-bottom:3px;}
+.danhmuctintuc2{width:170px;  float:right;border: 1px #CCCCCC  solid;background-color:#FFFFFF; padding-bottom:5px; margin-bottom:3px;}
+
+.tinxemnhiu{width:161px;  float:right;border: 1px #CCCCCC  solid;background-color:#FFFFFF; padding-bottom:5px; margin-bottom:3px; border-bottom-width:5px;border-bottom-color: #a2a2a2;}
+.tinxemnhiu2{width:170px;  float:right;border: 1px #CCCCCC  solid;background-color:#FFFFFF; padding-bottom:5px; margin-bottom:3px; border-bottom-width:5px;border-bottom-color: #a2a2a2;}
+.tuvanluat{width:161px;  float:right;border: 1px #CCCCCC  solid;background-color:#FFFFFF; padding-bottom:5px; margin-bottom:3px;border-bottom-width:5px;border-bottom-color: #a2a2a2;}
+.tuvanluat2{width:170px;  float:right;border: 1px #CCCCCC  solid;background-color:#FFFFFF; padding-bottom:5px; margin-bottom:3px;border-bottom-width:5px;border-bottom-color: #a2a2a2;}
+.next a {  height:19px; background-color:#999999 ; padding-right:3px; margin-left:5px;  color:#FFFFFF; float:left;}
+.next a:hover {  height:19px; background-color:#109502 ; color:#FFFFFF;  margin-left:5px;float:left;}
+.number  a { width:20px; height:19px; background-color:#999999 ; margin-left:5px;  color:#FFFFFF; float:left;}
+.number  a:hover { width:20px; height:19px; background-color:#109502 ; color:#FFFFFF;  margin-left:5px;float:left;}
+.menutintuc a { font-size:12px; font-weight:bold; color:#333333; float:left;}
+.menutintuc a:hover { font-size:12px; font-weight:bold; color:#0078cc; float:left;}
+.sreencacmuccon {width:590px; float:left; margin-left:20px; margin-bottom:10px;}
+.sreentinthitruong{width:645px; margin-bottom:10px; margin-top:8px;float:left;}
+.sreentinthitruong2{width:750px; margin-bottom:10px;float:left;}
+.boxhinhthitruonglon{ width:198px; height:126px; float:left; margin-left:9px; margin-top:8px;}
+.boxhinhthitruonglon img{ width:198px; height:126px; float:left; margin-left:1px; margin-top:1px;}
+.boxhinhthitruongnho{ width:135px; height:100px; float:left;border:1px #999999 solid; margin-left:20px;}
+.boxhinhthitruongnho img{float:left; margin-left:1px; margin-top:1px;}
+.tieudethitruongchitiet{ float:left; color:#0078cc;font-size:16px; font-weight:bold;}
+.tinkhacthitruongchitiet a { color:#333333;width:450px; height:20px; float:left;}
+.tinkhacthitruongchitiet a:hover { color:#0099FF;width:450px; height:20px; float:left;}
+.m1 {width:31px; height:22px; float:left; margin-right:1px;}
+.m1 img {width:31px; height:22px; float:left;}
+.noidunggioithieu{ width:543px;  margin-top:10px; margin-left:25px; margin-bottom:10px;}
+.sreennoidungthitruong{float:left; margin-top:15px; width:380px; margin-left:5px;}
+.sreenndtinthitruong{ width:360px; float:left;color:#333333;}
+.phantrang{float:right; width:110px; margin-right:8px; height:20px;}
+.sreentinthitruongchitiet{ width:720px; height:100px; margin-left:15px;}
+.sreentieudethitruong{ width:720px; float:left; margin-bottom:5px; margin-top:10px; }
+.noidungthitruongchitiet{ width:720px; margin-top:10px; float:left; margin-bottom:10px; font-size: 14px;}
+.sreentag{width:645px; height:18px; float:left; margin-bottom:10px;}
+.sreentag a:hover{text-decoration: underline;}
+.sreentag2{width:610px; height:18px; float:left; margin-bottom:5px;}
+.tag{ background:url(../tag.png); width:54px; height:19px; float:left;}
+
+.cactinkhac2{  width:550px; float:left; margin-bottom:10px; margin-left:20px;}
+
+.sreentinmatphochitiet{width:610px; float:left; margin-bottom:5px;  margin-top:3px;}
+.sreenthongtinnhadat{width:340px; margin-top:5px; margin-bottom:5px; float:left;}
+.ms{ width:390px; height:25px;}
+.tinh{ background-color:#FFFFFF; width:390px; height:25px;}
+.sreenthongtinnhadat>div:nth-child(odd){background-color:#f6f6f6;}
+.danhmucduan{width:343px;  float:left; margin-left:3px;border: 1px #CCCCCC  solid; margin-bottom:3px; background-color:#FFFFFF; border-bottom-color:#028287; border-bottom-width:5px; padding-bottom:5px;}
+
+.spduan{width:202px; height:106px; float:left; margin-bottom:5px;}
+.spduan img { float:left; width:202px; height:106px;}
+
+.titleduan a{ font-size:14px; font-weight:bold; color:#061c93; float:left; width:202px; margin-top:5px;}
+.titleduan a:hover{ font-size:14px; font-weight:bold; color:#061c93; float:left;width:202px;  margin-top:5px;text-decoration:underline;}
+
+.titleduankhac a{ font-size:12px; font-weight:bold; color:#333333; float:left; width:140px;}
+.titleduankhac a:hover{ font-size:12px; font-weight:bold; color:#0078cc; float:left;width:140px;}
+.spkhac { width:123px; height:116px; float:left;border:1px #999999 solid; margin-right:8px;}
+.spkhac img { float:left; margin-left:1px; margin-top:1px;}
+.duankhac{background:url(../titlenew.png); width:580px; height:38px; margin-left:15px;float:left; margin-bottom:15px;}
+.cactinkhac{background:url(../titlenew4.png); width:583px; height:38px; margin-left:12px;float:left; margin-bottom:10px;}
+.tindoanhnhan{width:312px;  float:left; border: 1px #CCCCCC  solid; margin-bottom:3px; background-color:#FFFFFF; border-bottom-color:#a2a2a2; border-bottom-width:5px; padding-bottom:5px;}
+.tinduan{width:343px;  float:left; border: 1px #CCCCCC  solid; margin-bottom:3px; background-color:#FFFFFF; border-bottom-color:#a2a2a2; border-bottom-width:5px; padding-bottom:5px;}
+.noidungtindoanhnhan a { color:#999999;width:250px; height:15px; float:left; }
+.noidungtindoanhnhan a:hover { color:#0099FF;width:250px; height:15px;float:left;}
+.duannoibat{width:312px;  float:left; border: 1px #CCCCCC  solid; margin-bottom:3px; background-color:#FFFFFF; border-bottom-color:#a2a2a2; border-bottom-width:5px; padding-bottom:5px;}
+.boxtimkiemduan{width:312px; border: 1px #CCCCCC  solid;float:left; border-bottom-color:#999999; border-bottom-width:5px; margin-bottom:3px; background-color:#FFFFFF;}
+.timkiembduan a { background:url(../timkiem2.png); width:100px; height:34px; float:left; margin-bottom:-10px;}
+.timkiembduan a:hover { background:url(../timkiem2.png); width:100px; height:34px; float:left;margin-bottom:-10px;}
+.tieudeduannoibat a{ width:125px; height:10px; float:left;color:#0078cc; margin-top:4px;font-size:13px; margin-bottom:3px;font-weight:bold;}
+.tieudeduannoibat a:hover{ width:175px; height:10px;  color:#0078cc; text-decoration:underline;float:left; margin-bottom:3px; margin-top:4px;font-size:13px;font-weight:bold;}
+.boxtinraokhac {width:343px;  float:left; margin-left:3px;border: 1px #CCCCCC  solid; margin-bottom:3px; background-color:#FFFFFF; border-bottom-color:#999999; border-bottom-width:5px; padding-bottom:5px;}
+.boxnhadatquan1 {width:343px;  float:left; margin-left:3px;border: 1px #CCCCCC  solid; margin-bottom:3px; background-color:#FFFFFF; border-bottom-color:#999999; border-bottom-width:5px; padding-bottom:5px;}
+.tinquan1 a {float:left; width:343px; height:25px; color:#666666; font-size:13px; margin-bottom:5px;}
+.tinquan1 a:hover { float:left;width:343px; height:25px;color:#028287; font-size:13px;margin-bottom:5px;}
+.inbangtin a { color:#999999; float:left;}
+.inbangtin a:hover { color:#028287; float:left;}
+.noidungtieudetinduocxemnhieu a { color:#999999;width:135px; float:left; display: block;}
+.noidungtieudetinduocxemnhieu a:hover { color:#0099FF;width:135px; float:left; display: block;}
+
+
+.cotright .qc img{width: 300px;}
+
+
+.news-pagination a, .news-pagination span{background-color: #999999;margin-left: 5px;color: #FFFFFF;float: left; padding: 2px 6px; font-size: 12px;}
+.news-pagination a:hover{background: #109502; color: #fff;}
+.news-pagination span.active{background: #109502; color: #fff; text-decoration: none;}
+
+.titletintuctopcap2 a { font-size: 18px; margin-left: 2px; width: 290px; color: #109502; font-weight: bold; float: left; }
+.hinhtoptintuccap2 img { width: 300px; height: 220px; float: left; margin-left: 10px; }
+.boxhinhxemnhieu { width: 115px; height: 70px; float: left; }
+.tieudetinxemnhieu a { color: #333333; font-size: 13px; float: left; font-weight: bold; margin-left: 5px; margin-top: -3px; }
+
+/* Phan trang new */
+.phantrang{float:left; width:100%; height:20px; margin-top: 15px; margin-right: 0px;}
+.phantrang .news-pagination{width:100%;text-align: center;}
+.phantrang .news-pagination a, .phantrang .news-pagination span{float: none; display: inline-block;}
+
+
+.linedot {height: 1px; background: url(../linedot.png); margin-left: 9px; float: left; width: 635px; margin-bottom: 5px; margin-top: 13px;}
+
+.invisiable{display: none;}
+
+.titletintuctop a{font-size:18px; width:415px; color:#109502; margin-left:9px; margin-top:5px; font-weight:bold; float:left;}
+.titletintuctop a:hover{font-size:18px; color:#109502;width:415px; margin-top:5px; text-decoration:underline; margin-left:9px;float:left;font-weight:bold;}
+
+.hinhtintuctop{width:415px; height:270px; margin-bottom:10px;float:left; margin-left:5px;}
+.hinhtintuctop img{width:415px; height:270px;margin-bottom:10px; float:left;margin-left:5px;}
+.hinhtintuctopcon{width:195px; height:100px; float:right;}
+.hinhtintuctopcon img{width:195px; height:100px; float:right;}
+.titletintuccon a{color:#061c93; float:right; width:195px; font-size:12px; margin-top:10px; font-weight:bold;}
+.titletintuccon a:hover{color:#061c93; text-decoration:underline;width:195px; margin-top:10px;float:right;font-size:12px; font-weight:bold;}
+
+h2#ctl27_ctl01_divSummary{font-size: 20px;}
+div#divContents{font-size: 13px;}
+
+/* end trang tin tuc,camnang,duan,nhadatban,nhadatchothue,nhucaunhadat*/
+
+
+.nav-member-col{width:170px; background:#FFFFFF; height:35px; float:left;border-right: 1px solid #ccc;}
+.nav-member-col.last{border-right: none;}
+
+.nav-member-col.active{background: #109502;}
+.nav-member-col.active .textthanhvien2 a{color: #ffffff;text-decoration: none;}
+
+.nav-member-col:hover{background: #109502;}
+.nav-member-col:hover .textthanhvien2 a{color: #ffffff;text-decoration: none;}
+
+.nav-member-col a{display: block;}
+
+
+.righttv .post{width: 920px; border: none;}
+.righttv .post .title-form-register {width: 920px;background-color: #109502;}
+.righttv .post .main-register{padding: 0 5px;}
+
+.righttv .post .type-post, .area-post{width: 450px;}
+.righttv .post.row-post-02, .area-post-02{width: 450px;}
+
+.righttv .post .row-post select, .righttv .post select{width: 450px;height: 28px;}
+.righttv .post .row-post input[type="text"]{height: 26px;}
+
+.login input[type="text"], .login input[type="password"]{height: 25px;}
+.righttv .list-post tr td{padding: 10px 2px;}

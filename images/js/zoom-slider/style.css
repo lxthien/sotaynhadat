@@ -1,0 +1,28 @@
+.zoom-slider{
+	width: 350px;
+	height: 235px;
+	margin: 0 auto;
+}
+.zoom-slider #zoom_03{
+    height: 235px;
+}
+#gallery_01{
+	width: 352px !important;
+	margin: 5px 0 auto;
+}
+#gallery_01 a{
+	display: block;
+	width: 86px;
+	height: 60px;
+	float: left;
+	margin-right: 1px;
+	margin-bottom: 1px;
+}
+#gallery_01 a img{
+	width: 86px;
+	height: 60px;
+}
+.zoomLens{
+    width: 100px !important;
+    height: 100px !important;
+}

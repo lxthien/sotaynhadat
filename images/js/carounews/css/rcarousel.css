@@ -1,0 +1,35 @@
+.ui-carousel {
+	height: 30px;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+	position: relative; /*for ie7 to work e.g in html carousels*/
+	width: 300px
+}
+
+.ui-carousel > .wrapper {
+    margin: 0;
+    padding: 0;
+    width: 9999px;
+}
+
+.ui-carousel > .wrapper > * {
+	border: 0;
+	display: block;
+	float: left;
+	height: 30px;
+	overflow: hidden;
+	width: 100%;
+}
+#carousel{
+    height: 150px !important;
+}
+.wrapper{
+    height: 150px !important;
+}
+.wrapper a{
+    width: 100%;
+    padding-left: 20px;
+    border-bottom: 1px solid #CCC !important;
+    padding-top: 7px !important;
+}
