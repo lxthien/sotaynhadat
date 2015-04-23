@@ -4,6 +4,7 @@
 <script language="javascript" type="text/javascript">
 $(document).ready(function(){
     $('#frm-post').validate({
+        ignore: [],
         rules:{
             estatetype_id:{
                 required: true
@@ -47,6 +48,11 @@ $(document).ready(function(){
             },
             price_text:{
                 required: true
+            },
+            description:{
+                required: function(){
+                    CKEDITOR.instances.description.updateElement();
+                }
             }
         },
         messages:{
@@ -92,6 +98,9 @@ $(document).ready(function(){
             },
             price_text:{
                 required: 'Vui lòng nhập Giá'
+            },
+            description:{
+                required: 'Vui lòng nhập nội dung'
             }
         }
     });
@@ -625,7 +634,7 @@ function addCommas(nStr)
                                     <div class="area-post">
                                         <span class="rowLabel">Mã xác nhận: <span
                                                 style="display: inline-block; color: red;">(*)</span></span>
-                                        <span class="rowInput" style="position: relative;">
+                                        <span class="rowInput row-capcha" style="position: relative;">
                                             <input style="width: 200px;float: left;margin-right: 5px;height: 28px;" type="text" name="captcha_code" id="captcha_code" value=""/>
                                             <img style="float: left;" id="captcha" height="30" src="<?= $base_url; ?>securimage/securimage_show.php" alt="CAPTCHA Image"/>
                                             <a href="javascript:void(0)"

@@ -845,6 +845,10 @@ label.error {
     }
 }
 
+.row-capcha label.error{
+    right: 243px;
+}
+
 
 .timkiembduan input[type="submit"]{
     background: url(../timkiem2.png);
@@ -979,14 +983,14 @@ label.error {
     float: left;
 }
 .row-post-02, .area-post-02{
-    width: 285px;
+    width: 450px;
     float: left;
 }
 .register select{
     width: 285px;
 }
 .enter-price{
-    width: 230px;
+    width: 227px;
     float: left;
     margin-right: 10px;
 }
@@ -996,7 +1000,7 @@ label.error {
     margin-right: 10px;
 }
 .select-price{
-    width: 230px;
+    width: 450px;
     float: left;
 }
 .select-price select{

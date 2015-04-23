@@ -4,6 +4,7 @@
 <script language="javascript" type="text/javascript">
 $(document).ready(function(){
     $('#frm-post').validate({
+        ignore: [],
         rules:{
             estatetype_id:{
                 required: true
@@ -47,6 +48,11 @@ $(document).ready(function(){
             },
             price_text:{
                 required: true
+            },
+            description:{
+                required: function(){
+                    CKEDITOR.instances.description.updateElement();
+                }
             }
         },
         messages:{
@@ -83,7 +89,7 @@ $(document).ready(function(){
                 required: 'Vui lòng nhập Thông tin mô tả'
             },
             captcha_code:{
-                required: 'Vui lòng nhập Mã xác nhận',
+                required: 'Vui lòng nhập mã xác nhận',
                 maxlength: 'Mã xác nhận 6 ký tự',
                 minlength: 'Mã xác nhận 6 ký tự'
             },
@@ -92,6 +98,9 @@ $(document).ready(function(){
             },
             price_text:{
                 required: 'Vui lòng nhập Giá'
+            },
+            description:{
+                required: 'Vui lòng nhập nội dung'
             }
         }
     });
@@ -497,10 +506,11 @@ function load_district()
                         </div>
                         <div class="row-post depend-isprice">
                             <div class="enter-price">
-                                <span class="rowLabel">Nhập giá: <span style="display: inline-block; color: red;">(*)</span><span
-                                        class="note-area-text">(Chỉ dùng số và dấu phẩy)</span></span>
-                                <input style="width: 220px;" class="price-text" type="text" name="price_text" id="price_text"
-                                       value="<?= $o->price_text; ?>"/>
+                                <span class="rowLabel">Nhập giá: <span style="display: inline-block; color: red;">(*)</span>
+                                <span class="note-area-text">(Chỉ dùng số và dấu phẩy)</span></span>
+                                <span class="rowInput">
+                                    <input style="width: 220px;" class="price-text" type="text" name="price_text" id="price_text" value="<?= $o->price_text; ?>"/>
+                                </span>
                             </div>
                             <div class="bettwen-price">
                                 <span class="rowLabel">Đơn vị: <span style="display: inline-block; color: red;">(*)</span></span>
@@ -586,8 +596,9 @@ function load_district()
                             </div>
                         </div>
                         <span class="rowLabel">Tiêu đề: <span style="display: inline-block; color: red;">(*)</span></span>
-                        <span class="rowInput"><input maxlength="100" type="text" name="title" id="title"
-                                                      value="<?= $o->title; ?>"/></span>
+                        <span class="rowInput" style="width: 451px;">
+                            <input maxlength="100" type="text" name="title" id="title" value="<?= $o->title; ?>"/>
+                        </span>
                         <span style="color: #5a5a5a; font-size: 12px;" class="rowLabel">(Vui lòng nhập tiêu đề bằng tiếng Việt, không viết hoa, tối thiểu 30 ký tự, tối đa 100 ký tự.)</span>
                         <span> </span>
                         <span class="rowLabel">Hình ảnh: <span style="display: inline-block; color: red;">(*)</span></span>
@@ -623,9 +634,8 @@ function load_district()
                         <span class="cl"></span>
                                 <span class="rowInput" style="float: left;">
                                     <div class="area-post">
-                                        <span class="rowLabel">Mã xác nhận: <span
-                                                style="display: inline-block; color: red;">(*)</span></span>
-                                        <span class="rowInput" style="position: relative;">
+                                        <span class="rowLabel">Mã xác nhận: <span style="display: inline-block; color: red;">(*)</span></span>
+                                        <span class="rowInput row-capcha" style="position: relative;">
                                             <input style="width: 200px;float: left;margin-right: 5px;height: 28px;" type="text" name="captcha_code" id="captcha_code" value=""/>
                                             <img style="float: left;" id="captcha" height="30" src="<?= $base_url; ?>securimage/securimage_show.php" alt="CAPTCHA Image"/>
                                             <a href="javascript:void(0)"

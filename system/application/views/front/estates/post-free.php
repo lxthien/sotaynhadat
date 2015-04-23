@@ -4,6 +4,7 @@
 <script language="javascript" type="text/javascript">
 $(document).ready(function(){
     $('#frm-post').validate({
+        ignore: [],
         rules:{
             estatetype_id:{
                 required: true
@@ -54,6 +55,11 @@ $(document).ready(function(){
             mobile_contact:{
                 required: true,
                 number: true
+            },
+            description:{
+                required: function(){
+                    CKEDITOR.instances.description.updateElement();
+                }
             }
         },
         messages:{
@@ -106,6 +112,9 @@ $(document).ready(function(){
             mobile_contact:{
                 required: 'Vui lòng nhập số di động',
                 number: 'Vui lòng chỉ nhập số'
+            },
+            description:{
+                required: 'Vui lòng nhập nội dung'
             }
         }
     });
@@ -374,7 +383,7 @@ function load_district()
 
 <div class="linktop" style=" width:960px;height:20px; float:left; margin-top:8px;">
     <div class="linkdautrang" style="margin-left:5px; width:auto; float:left;"><a href="<?=$base_url;?>">Trang chủ</a></div>
-    <div class="linkdautrang" style=" width:auto; float:left;"><a href="<?=$base_url;?>dang-tin-rao-vat-nha-dat-mien-phi">Đăng tin miễn phí</a></div>
+    <div class="linkdautrang" style=" width:auto; float:left;"><a class="linkdautrang-active" href="<?=$base_url;?>dang-tin-rao-vat-nha-dat-mien-phi">Đăng tin miễn phí</a></div>
 </div>
 <div class="main" style="width:960px;float:left;margin-top:5px; margin-left:12px; ">
     <div class="righttv" style="width:920px; margin: 0 auto;">
@@ -476,9 +485,11 @@ function load_district()
                             </span>
                         </div>
                         <div class="row-post depend-isprice">
-                            <div class="enter-price">
+                            <div class="enter-price" style="width: 232px;">
                                 <span class="rowLabel">Nhập giá: <span style="display: inline-block; color: red;">(*)</span><span class="note-area-text">(Chỉ dùng số và dấu phẩy)</span></span>
-                                <input style="width: 225px;" class="price-text" type="text" name="price_text" id="price_text" value="<?=$o->price_text;?>"/>
+                                <span class="rowInput">
+                                    <input style="width: 225px;" class="price-text" type="text" name="price_text" id="price_text" value="<?=$o->price_text;?>"/>
+                                </span>
                             </div>
                             <div class="bettwen-price">
                                 <span class="rowLabel">Đơn vị: <span style="display: inline-block; color: red;">(*)</span></span>
@@ -551,8 +562,8 @@ function load_district()
                             </div>
                         </div>
                         <span class="rowLabel">Tiêu đề: <span style="display: inline-block; color: red;">(*)</span></span>
-                        <span class="rowInput"><input maxlength="100" type="text" name="title" id="title" value="<?=$o->title;?>" /></span>
-                         <span style="color: #5a5a5a; font-size: 12px;" class="rowLabel">(Vui lòng nhập tiêu đề, tối thiểu 30 ký tự, tối đa 100 ký tự, không sử dụng ký tự đặc biệt: !,@,#,$...)</span> <span> </span>
+                        <span class="rowInput" style="width: 580px;"><input maxlength="100" type="text" name="title" id="title" value="<?=$o->title;?>" /></span>
+                        <span style="color: #5a5a5a; font-size: 12px;" class="rowLabel">(Vui lòng nhập tiêu đề, tối thiểu 30 ký tự, tối đa 100 ký tự, không sử dụng ký tự đặc biệt: !,@,#,$...)</span> <span> </span>
                         <span class="rowLabel">Hình ảnh: <span style="display: inline-block; color: red;">(*)</span></span>
                         <span class="rowInput muti-images">
                             <div class="row-image">
@@ -586,13 +597,13 @@ function load_district()
                         <div class="row-posts">
                             <span class="information-contact">Thông tin liên hệ:</span>
                             <span class="rowLabel">Tên: <span style="display: inline-block; color: red;">(*)</span></span>
-                            <span class="rowInput"><input placeholder="Nhập tên liên hệ" type="text" name="name_contact" id="name_contact" value="<?=$o->name_contact;?>" /></span>
+                            <span class="rowInput" style="width: 580px;"><input placeholder="Nhập tên liên hệ" type="text" name="name_contact" id="name_contact" value="<?=$o->name_contact;?>" /></span>
                             <span class="rowLabel">Địa chỉ:</span>
                             <span class="rowInput"><input placeholder="Nhập địa chỉ liên hệ" type="text" name="address_contact" id="address_contact" value="<?=$o->address_contact;?>" /></span>
                             <span class="rowLabel">Điện thoại cố định:</span>
                             <span class="rowInput"><input placeholder="Nhập số điện thoại cố định (nếu có)" type="text" name="phone_contact" id="phone_contact" value="<?=$o->phone_contact;?>" /></span>
                             <span class="rowLabel">Điện thoại di động: <span style="display: inline-block; color: red;">(*)</span></span>
-                            <span class="rowInput"><input placeholder="Nhập số điện thoại di động" type="text" name="mobile_contact" id="mobile_contact" value="<?=$o->mobile_contact;?>" /></span>
+                            <span class="rowInput" style="width: 580px;"><input placeholder="Nhập số điện thoại di động" type="text" name="mobile_contact" id="mobile_contact" value="<?=$o->mobile_contact;?>" /></span>
                             <span class="rowLabel">Email:</span>
                             <span class="rowInput"><input placeholder="Nhập địa chỉ Email (nếu có)" type="text" name="email_contact" id="email_contact" value="<?=$o->email_contact;?>" /></span>
                         </div>
@@ -600,7 +611,7 @@ function load_district()
                             <div class="area-post">
                                         <span class="rowLabel">Mã xác nhận: <span
                                                 style="display: inline-block; color: red;">(*)</span></span>
-                                        <span class="rowInput" style="position: relative;">
+                                        <span class="rowInput row-capcha" style="position: relative;">
                                             <input style="width: 200px;float: left;margin-right: 5px;height: 28px;" type="text" name="captcha_code" id="captcha_code" value=""/>
                                             <img style="float: left;" id="captcha" height="30" src="<?= $base_url; ?>securimage/securimage_show.php" alt="CAPTCHA Image"/>
                                             <a href="javascript:void(0)"
