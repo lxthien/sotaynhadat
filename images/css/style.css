@@ -1618,7 +1618,7 @@ p.notice-msg{
 .sreentindb .icon-vip{position: absolute; top: 0px; right: 10px; z-index: 100;}
 
 .sreentindb .noidung p.date{color:#666674;float:left;margin-right:0px;width: 100%;text-align: right;position: absolute; right: 10px; bottom: 10px;}
-a.of-project{color: #666; font-weight: bold;}
+a.of-project{color: #109502; font-weight: 600;}
 a.of-project:hover{text-decoration: underline;}
 
 .linktop{width:960px; float:left; margin-top:12px; margin-bottom:8px;}

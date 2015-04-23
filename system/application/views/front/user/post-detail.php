@@ -115,11 +115,14 @@
                             <?php endif; ?>
                         </p>
                     </div>
+                    <?php if($o->estatedirection_id != 0 || $o->legally != ''): ?>
                     <div class="tinh add-left-item">
+                        <?php if($o->estatedirection_id != 0): ?>
                         <p style="float:left; margin-top:7px; width: 130px; font-size: 14px;">
                             <span>Hướng: </span>
                             <span class="style4"><?=$o->estatedirection->name;?></span>
                         </p>
+                        <?php endif; ?>
                         <?php if($o->legally != ''): ?>
                             <p style="float:left; margin-top:7px; width: 130px; font-size: 14px;">
                                 <span>Pháp lý: </span>
@@ -127,6 +130,7 @@
                             </p>
                         <?php endif; ?>
                     </div>
+                    <?php endif; ?>
                     <?php if($o->article_id !=0):
                         $project = new Article($o->article_id);
                         ?>
