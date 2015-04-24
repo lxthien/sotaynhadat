@@ -9,10 +9,6 @@
             </div>
             <div class="boxnew" style="width:610px; float:left;  margin-top:10px;">
                 <?php foreach($estates as $row):
-                    if($row->updated != '')
-                        $date = $row->updated;
-                    else
-                        $date = $row->created;
                     ?>
                     <div class="sreentindb" style="width:610px; float:left; margin-bottom:1px;">
                         <div class="sreentindb" style="width:610px; height:15px; ">
@@ -81,7 +77,7 @@
                                     <span class="style3"></span>
                                 </p>
                                 <p style=" color:#6e6e6e; float:left; margin-left:20px;">Địa điểm : <span class="diadiem"><a href=""><?=$row->estatedistrict->name;?></a> </span></p>
-                                <p style=" color:#333333; float:right; margin-right:14px;"><?=date('d/m/Y',strtotime($date))?></p>
+                                <p style=" color:#333333; float:right; margin-right:14px;"><?=date('d/m/Y',strtotime($row->created))?></p>
                             </div>
                         </div>
                     </div>

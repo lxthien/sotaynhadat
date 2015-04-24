@@ -15,10 +15,6 @@
             </div>
             <div class="boxnew">
                 <?php foreach($estates as $row):
-                    if($row->updated != '')
-                        $date = $row->updated;
-                    else
-                        $date = $row->created;
                     ?>
                     <div class="sreentindb <?php if($row->isVip == 1): ?>vip<?php endif; ?>">
                         <?php if($row->isVip == 1): ?><img class="icon-vip" src="<?=$base_url?>images/icon-vip.png" alt="Tin Vip"/><?php endif; ?>
@@ -71,7 +67,7 @@
                                 <p class="des">
                                     <?=strlen(strip_tags($row->description)) < 400 ? strip_tags($row->description): cut_string2(strip_tags($row->description), 400).' ...';?>
                                 </p>
-                                <p class="date"><?php echo date('d/m/Y',strtotime($date)); ?></p>
+                                <p class="date"><?php echo date('d/m/Y',strtotime($row->created)); ?></p>
                             </div>
                         </div>
                     </div>

@@ -190,12 +190,11 @@ class estates extends MY_Controller{
             $estate->article_id = $this->input->post('article_id');
             $estate->price_type = $this->input->post('price_type');
             if( $estate->isVip == 0 ){
-                $estate->created = date('Y-m-d H:i:s');
-                $estate->updated = date('Y-m-d H:i:s');
                 $estate->updateTime = date('Y-m-d H:i:s');
             }else{
                 $estate->created = $estate->created;
                 $estate->updated = $estate->updated;
+                $estate->updateTime = date('Y-m-d H:i:s');
             }
 
             $estate->tag = $this->input->post('tag');
@@ -347,12 +346,11 @@ class estates extends MY_Controller{
             $estate->article_id = $this->input->post('article_id');
             $estate->price_type = $this->input->post('price_type');
             if( $estate->isVip == 0 ){
-                $estate->created = date('Y-m-d H:i:s');
-                $estate->updated = date('Y-m-d H:i:s');
                 $estate->updateTime = date('Y-m-d H:i:s');
             }else{
                 $estate->created = $estate->created;
                 $estate->updated = $estate->updated;
+                $estate->updateTime = date('Y-m-d H:i:s');
             }
 
             $estate->name_contact = $this->input->post('name_contact');

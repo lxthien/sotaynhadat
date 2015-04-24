@@ -14,10 +14,6 @@
         </div>
         <div class="boxnew" style="width:635px; float:left; margin-top:10px;">
             <?php $i=0; foreach($estatesVip as $row): $i++;
-				if($row->updated != '')
-                    $date = $row->updated;
-                else
-                    $date = $row->created;
             ?>
             <div class="sreentindb <?php if($row->isVip == 1): ?>vip<?php endif; ?>">
                     <?php if($row->isVip == 1): ?><img class="icon-vip" src="<?=$base_url?>images/icon-vip.png" alt="Tin Vip"/><?php endif; ?>
@@ -70,7 +66,7 @@
                             <p class="des">
                                 <?=strlen(strip_tags($row->description)) < 300 ? strip_tags($row->description): cut_string2(strip_tags($row->description), 300).' ...';?>
                             </p>
-                            <p class="date"><?php echo date('d/m/Y',strtotime($date)); ?></p>
+                            <p class="date"><?php echo date('d/m/Y',strtotime($row->created)); ?></p>
                         </div>
                     </div>
                 </div>
@@ -87,8 +83,6 @@
         </div>
         <div class="boxnew">
             <?php $i=0; foreach($estatesNew as $row): $i++;
-                if($row->updated != '') $date = $row->updated;
-                else $date = $row->created;
             ?>
                 <div class="<?= $i%2!=0 ? 'boxtinrao' : 'boxtinrao2'; ?>">
                     <div class="tieuderao">
@@ -119,7 +113,7 @@
                             <img src="<?=$base_url?>images/iconcamera.png" alt="camera icon"/>
 						</p>
                         <?php endif; ?>
-                        <p class="date"><?php echo date('d/m/Y',strtotime($date)); ?></p>
+                        <p class="date"><?php echo date('d/m/Y',strtotime($row->created)); ?></p>
 					</div>
                 </div>
             <?php endforeach; unset($row); ?>
