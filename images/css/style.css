@@ -426,7 +426,7 @@ a:active {
 .left{width:645px; float:left; margin-right:0px; border-right: 1px solid #cccccc;}
 .left.home-page{border-right: 1px solid #ffffff;}
 .left2{width:751px; float:left; }
-.right{width:320px; float:right; margin-right: 3px;}
+.right{width:300px; float:right; margin-right: 0px;}
 .right2{width:170px;  float:right; margin-right:17px; }
 
 .left .hotnew .boxnew{width:624px; float:left; margin-top:10px;}
@@ -503,7 +503,7 @@ a:active {
 .tieudethamdinh a{ width:343px; height:25px; color:#0078cc; font-size:11px; font-weight:bold;}
 .tieudethamdinh a:hover{ width:343px; height:25px; color:#0078cc; text-decoration:underline;font-size:11px;font-weight:bold;}
 
-.boxnoibat{margin-bottom: 10px; width:312px;  float:left; border: 1px #CCCCCC  solid; background-color:#FFFFFF; border-bottom-color:#028287; border-bottom-width:5px; padding-bottom:-5px;}
+.boxnoibat{margin-bottom: 10px; width:312px;  float:left; border: 1px #CCCCCC  solid; background-color:#FFFFFF; padding-bottom:-5px;}
 .tinkhacnoibat a {float:left; width:312px; height:25px; color:#666666; font-size:13px; margin-bottom:5px;}
 .tinkhacnoibat a:hover { float:left;width:312px; height:25px;color:#0078cc; font-size:13px;margin-bottom:5px;}
 .tendiaphuong a{ color:#0078cc; font-size:12px; font-weight:bold; margin-left:5px; margin-top:-2px; float:left;}
@@ -527,6 +527,24 @@ a:active {
 .tieudeduan a:hover{ color:#028287; width:160px; height:20px;  text-decoration:underline;float:left; margin-bottom:5px; margin-top:1px;font-size:13px;font-weight:bold;}
 .tieudeduan2 a { color:#999999; width:140px; height:30px; font-weight:bold; font-size:12px; float:left;}
 .tieudeduan2 a:hover { color:#028287; width:140px; height:30px;font-weight:bold; font-size:12px; float:left;}
+
+
+.right{
+    margin-right: 10px;
+}
+.right .boxnoibat{
+    width: 300px;
+}
+.right .boxnoibat .line3{
+    width: 300px;
+}
+.right .qc img{
+    width: 300px;
+}
+.right .boxduan-homepage{
+    width: 300px; border-bottom-width: 1px;
+}
+
 
 /*end  home*/
 
@@ -614,12 +632,12 @@ a:active {
 .spkhac img { float:left; margin-left:1px; margin-top:1px;}
 .duankhac{background:url(../titlenew.png); width:580px; height:38px; margin-left:15px;float:left; margin-bottom:15px;}
 .cactinkhac{background:url(../titlenew4.png); width:583px; height:38px; margin-left:12px;float:left; margin-bottom:10px;}
-.tindoanhnhan{width:312px;  float:left; border: 1px #CCCCCC  solid; margin-bottom:3px; background-color:#FFFFFF; border-bottom-color:#a2a2a2; border-bottom-width:5px; padding-bottom:5px;}
+.tindoanhnhan{width:300px;  float:left; border: 1px #CCCCCC  solid; margin-bottom:10px; background-color:#FFFFFF; padding-bottom:5px;}
 .tinduan{width:343px;  float:left; border: 1px #CCCCCC  solid; margin-bottom:3px; background-color:#FFFFFF; border-bottom-color:#a2a2a2; border-bottom-width:5px; padding-bottom:5px;}
 .noidungtindoanhnhan a { color:#999999;width:250px; height:15px; float:left; }
 .noidungtindoanhnhan a:hover { color:#0099FF;width:250px; height:15px;float:left;}
-.duannoibat{width:312px;  float:left; border: 1px #CCCCCC  solid; margin-bottom:3px; background-color:#FFFFFF; border-bottom-color:#a2a2a2; border-bottom-width:5px; padding-bottom:5px;}
-.boxtimkiemduan{width:312px; border: 1px #CCCCCC  solid;float:left; border-bottom-color:#999999; border-bottom-width:5px; margin-bottom:3px; background-color:#FFFFFF;}
+.duannoibat{width:300px;  float:left; border: 1px #CCCCCC  solid; background-color:#FFFFFF; padding-bottom:5px;}
+.boxtimkiemduan{width:300px; border: 1px #CCCCCC  solid;float:left; background-color:#FFFFFF;}
 .timkiembduan a { background:url(../timkiem2.png); width:100px; height:34px; float:left; margin-bottom:-10px;}
 .timkiembduan a:hover { background:url(../timkiem2.png); width:100px; height:34px; float:left;margin-bottom:-10px;}
 .tieudeduannoibat a{ width:125px; height:10px; float:left;color:#0078cc; margin-top:4px;font-size:13px; margin-bottom:3px;font-weight:bold;}
@@ -644,7 +662,7 @@ a:active {
 
 .tinxemnhieu a {float:left; width:343px; height:25px; color:#666666; font-size:13px; margin-bottom:5px;}
 .tinxemnhieu a:hover { float:left;width:343px; height:25px;color:#0078cc; font-size:13px;margin-bottom:5px;}
-.boxtimkiembds{width:312px; border: 1px #CCCCCC  solid;float:left; border-bottom-color:#999999; border-bottom-width:5px; background-color:#FFFFFF;}
+.boxtimkiembds{width:300px; border: 1px #CCCCCC  solid;float:left; background-color:#FFFFFF;}
 .timkiembds2 a { background:url(../timkiem2.png); width:100px; height:34px; float:right; margin-right:105px; margin-bottom:-10px;}
 .timkiembds2 input[type="submit"] {
     background:url(../timkiem2.png);
@@ -1421,13 +1439,13 @@ label.error {
 }
 
 .email-signup-mbnd{
-    width: 312px;
+    width: 300px;
     margin-top: 10px;
     float: left;
     border: 1px solid #ccc;
 }
 .title-email-signup{
-    width: 292px;
+    width: 280px;
     height: 30px;
     background-color: #ccc;
     padding: 0 10px;
@@ -1438,14 +1456,14 @@ label.error {
     border-top: 2px solid #A8A6A6;
 }
 .info-mail-signup{
-    width: 294px;
+    width: 280px;
     padding: 8px 10px;
     font-size: 12px;
     color: #757575;
     font-style: italic;
 }
 .main-form-email-signup{
-    width: 294px;
+    width: 280px;
     padding: 0 10px;
     position: relative;
     height: 50px;
@@ -1454,11 +1472,12 @@ label.error {
     position: absolute;
     top: 0;
     left: 10px;
-    height: 25px;
-    line-height: 25px;
+    height: 27px;
+    line-height: 27px;
     padding-left: 4px;
-    width: 220px;
+    width: 208px;
     color: #A8A6A6;
+    border: 1px solid #cccccc;
 }
 .main-form-email-signup input[type="button"]{
     position: absolute;

@@ -246,7 +246,7 @@ Chúng tôi truyền tải các thông tin đa dạng từ nhà đất bán, cho
 	
 	<?php echo $this->load->view('front/includes/nha-dat-ban-tai'); ?>
 	
-	<div class="sreenboxtwen mt-15px" style="width:313px; float:left;">
+	<div class="sreenboxtwen mt-15px" style="width:300px; float:left;">
         <div class="boxduan-homepage">
             <span class="title-top-box">Dự án nổi bật</span>
             <div class="scroll-nice-02">
@@ -254,7 +254,7 @@ Chúng tôi truyền tải các thông tin đa dạng từ nhà đất bán, cho
                 $cat = new Newscatalogue($row->newscatalogue_id);
                 if($i>4){ break; }
                 ?>
-            <div style="width:280px; float:left; margin-bottom:14px; margin-left: 10px;">
+            <div style="width:280px; float:left; margin-bottom:15px; margin-left: 3px;">
                 <div class="boxhinh-duan-homepage">
                     <a href="<?=$base_url?>du-an/<?=$cat->name_none.'/'.$row->title_none?>.html" title="<?=$row->title_vietnamese;?>">
                         <img alt="<?=$row->title_vietnamese;?>" src="<?php echo image('img/news/'.$row->image, 'news_280_150') ?>" />

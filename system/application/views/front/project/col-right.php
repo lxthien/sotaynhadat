@@ -1,10 +1,10 @@
 <div class="right">
     <div class="boxnoibat">
-        <div class="titledm" style="background-color:#1483d0; width:312px; height:35px; float:right; margin-bottom:5px;">
-            <p  style="font-size:16px; font-weight:bold; color:#FFFFFF; margin-top:8px; margin-left:25px; float:left;">Danh mục dự án</p>
+        <div class="titledm" style="background-color:#0f9502; width:300px; height:30px; float:right; margin-bottom:5px;">
+            <p style="font-size:16px; font-weight:bold; color:#FFFFFF; margin-top: 5px; margin-left:25px; float:left;">Danh mục dự án</p>
         </div>
         <?php foreach($this->projectsCate as $row): ?>
-            <div class="sreentinnoibat" style="width:312px; height:30px; float:left; margin-bottom:3px;">
+            <div class="sreentinnoibat" style="width:300px; height:30px; float:left; margin-bottom:3px;">
                 <div class="tinkhacnoibat">
                     <a href="<?=$base_url?>du-an/<?=$row->name_none?>" title="<?=$row->name_vietnamese;?>">
                         <p style="margin-left:25px; margin-top:9px; font-weight:bold;">
@@ -16,14 +16,14 @@
             <div class="line3"></div>
         <?php endforeach; unset($row); ?>
     </div>
-    <div class="boxtimkiemduan">
+    <div class="boxnoibat boxtimkiemduan">
         <span class="title-top-box">Tìm kiếm dự án</span>
         <form action="<?=$base_url?>tim-kiem-du-an" method="post">
-            <div class="sreentimkiemduan" style="width:312px; float:left;">
-                <div class="tieudetimkiemduan" style="width:200px; float:left; margin-left:10px; margin-bottom:3px;">
+            <div class="sreentimkiemduan" style="width:300px; float:left;">
+                <div class="tieudetimkiemduan" style="width:200px; float:left; margin-left:3px; margin-bottom:3px;">
                     <p style="width:200px; float:left; color:#3366CC; margin-left:10px; font-weight:400; font-size:14px;">Tìm kiếm theo danh mục:</p>
                 </div>
-                <div class="sreenmenuseach" style="float:left; width:280px; margin-top:-5px;margin-left:8px;">
+                <div class="sreenmenuseach" style="float:left; width:280px; margin-top:-5px;margin-left:3px;">
                     <select name="estatetype_id" id="estatetype_id" size="1" style="float:left; margin-right:5px; margin-left:13px; width:270px;  height:23px; margin-top:10px; margin-bottom:5px;  border:1px  #CCCCCC solid;">
                         <option value="0" selected="selected">Chọn danh mục dự án</option>
                         <?php foreach($this->projectsCate as $row): ?>
@@ -32,11 +32,11 @@
                     </select>
                 </div>
             </div>
-            <div class="sreentimkiemduan" style="width:312px; float:left;">
-                <div class="tieudetimkiemduan" style="width:200px; float:left; margin-left:10px; margin-bottom:3px;">
+            <div class="sreentimkiemduan" style="width:300px; float:left;">
+                <div class="tieudetimkiemduan" style="width:200px; float:left; margin-left:3px; margin-bottom:3px;">
                     <p style="width:200px; float:left; color:#3366CC; margin-left:10px; font-weight:400; font-size:14px;">Tìm kiếm theo Tỉnh/TP:</p>
                 </div>
-                <div class="sreenmenuseach" style="float:left; width:280px; margin-top:-5px;margin-left:8px;">
+                <div class="sreenmenuseach" style="float:left; width:280px; margin-top:-5px;margin-left:3px;">
                     <select name="estatecity_id" id="estatecity_id" size="1" style="float:left; margin-right:5px; margin-left:13px; width:270px;  height:23px; margin-top:10px; margin-bottom:5px;  border:1px  #CCCCCC solid;">
                         <option value="">Chọn Tỉnh/Thành phố</option>
                         <?php foreach($this->estateProvince as $row): ?>
@@ -45,30 +45,30 @@
                     </select>
                 </div>
             </div>
-            <div class="sreentimkiemduan" style="width:312px; float:left;">
-                <div class="tieudetimkiemduan" style="width:200px; float:left; margin-left:10px; margin-bottom:3px;">
+            <div class="sreentimkiemduan" style="width:300px; float:left;">
+                <div class="tieudetimkiemduan" style="width:200px; float:left; margin-left:3px; margin-bottom:3px;">
                     <p style="width:200px; float:left; color:#3366CC; margin-left:10px; font-weight:400; font-size:14px;">Tìm kiếm theo Quận/Huyện:</p>
                 </div>
-                <div class="sreenmenuseach" style="float:left; width:280px; margin-top:-5px;margin-left:8px;">
+                <div class="sreenmenuseach" style="float:left; width:280px; margin-top:-5px;margin-left:3px;">
                     <select name="estatedistrict_id" id="estatedistrict_id" size="1" style="float:left; margin-right:5px; margin-left:13px; width:270px;  height:23px; margin-top:10px; margin-bottom:5px;  border:1px  #CCCCCC solid;">
                         <option value="">Chọn Quận/Huyện</option>
                     </select>
                 </div>
             </div>
-            <div class="sreenbtonseach" style="width:100px; height:34px; margin-left:120px; margin-bottom:10px; float:left;">
+            <div class="sreenbtonseach" style="width:100px; height:34px; margin-left:100px; margin-bottom:10px; float:left;">
                 <div class="timkiembduan">
                     <input type="submit" value=""/>
                 </div>
             </div>
         </form>
     </div>
-    <div class="duannoibat">
+    <div class="boxnoibat duannoibat">
         <span class="title-top-box">Dự án nổi bật</span>
         <?php foreach($this->projectHot as $row):
             $cat = new Newscatalogue($row->newscatalogue_id);
             ?>
-        <div  class="sreennoibat" style="width:312px; margin-bottom:10px; float:left;">
-            <div class="boxhinh6">
+        <div  class="sreennoibat" style="width:300px; margin-bottom:10px; float:left;">
+            <div class="boxhinh6" style="margin-left: 10px;">
                 <a href="<?=$base_url;?>du-an/<?=$cat->name_none.'/'.$row->title_none;?>.html" title="<?=$row->title_vietnamese?>">
                     <img src="<?php echo image('img/news/'.$row->image, 'news_115_91') ?>" alt="<?=$row->title_vietnamese?>" />
                 </a>
@@ -93,8 +93,8 @@
     </div>
     <div class="tindoanhnhan">
         <span class="title-top-box">Tin dự án</span>
-        <div  class="sreennoibat" style="width:312px; height:100px; margin-bottom:10px; float:left;">
-            <div class="boxhinh6">
+        <div  class="sreennoibat" style="width:300px; height:100px; margin-bottom:10px; float:left;">
+            <div class="boxhinh6" style="margin-left: 5px;">
                 <a href="<?=$base_url?>tin-tuc/tin-du-an/<?=$this->projectNewsFirst->title_none;?>.html" title="<?=$this->projectNewsFirst->title_vietnamese?>">
                     <img src="<?php echo image('img/news/'.$this->projectNewsFirst->image, 'news_115_91') ?>" alt="<?=$this->projectNewsFirst->title_vietnamese?>" />
                 </a>
@@ -116,7 +116,7 @@
             if($row->id != $this->projectNewsFirst->id):
                 $cat = new Newscatalogue($row->newscatalogue_id);
                 ?>
-                <div class="sreentindoanhnhan" style=" width:312px; margin-bottom:5px; float:left;">
+                <div class="sreentindoanhnhan" style="width:300px; margin-bottom:5px; float:left;">
                     <div class="icon3"></div>
                     <div class="noidungtindoanhnhan">
                         <a style="height: auto; padding: 2px 0px; color: #000;" href="<?=$base_url?>tin-tuc/<?=$cat->name_none.'/'.$row->title_none;?>.html" title="<?=$row->title_vietnamese?>">
