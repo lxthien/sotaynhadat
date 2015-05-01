@@ -599,7 +599,7 @@ function load_district()
                         <span class="rowInput" style="width: 451px;">
                             <input maxlength="100" type="text" name="title" id="title" value="<?= $o->title; ?>"/>
                         </span>
-                        <span style="color: #5a5a5a; font-size: 12px;" class="rowLabel">(Vui lòng nhập tiêu đề bằng tiếng Việt, không viết hoa, tối thiểu 30 ký tự, tối đa 100 ký tự.)</span>
+                        <span style="color: #5a5a5a; font-size: 12px;" class="rowLabel">(Vui lòng nhập tiêu đề bằng tiếng Việt có dấu, không viết hoa, tối thiểu 30 ký tự, tối đa 100 ký tự.)</span>
                         <span> </span>
                         <span class="rowLabel">Hình ảnh: <span style="display: inline-block; color: red;">(*)</span></span>
                                     <span class="rowInput muti-images">
@@ -651,7 +651,7 @@ function load_district()
                                 <span class="rowInput" style="float: left; width: 100%; margin-bottom: 10px;">
                                     <input type="submit" class="button" value="Đăng tin"/>
                                 </span>
-                    <span style="color: #0000; line-height:20px; font-size: 12px;" class="rowLabel">Nếu gặp khó khăn hoặc cần hỗ trợ trong việc đăng tin, Quý khách hãy liên hệ ngay với Chúng tôi theo số Hotline: 0168 200 0080 hoặc Email: info@sotaynhadat.vn để được trợ giúp nhanh chóng!</span>
+                    <span style="color: #0000; line-height:20px; font-size: 12px;" class="rowLabel">Nếu gặp khó khăn hoặc cần hỗ trợ trong việc đăng tin, Quý khách hãy liên hệ ngay với Chúng tôi theo số Hotline: 0168 200 0080 hoặc Email: hotro@sotaynhadat.vn để được trợ giúp nhanh chóng!</span>
                     </form>
                 </div>
                     </div>

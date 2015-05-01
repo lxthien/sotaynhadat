@@ -10,7 +10,7 @@
     <div class="left estates">
         <div class="hotnew">
             <div class="titlenew-add">
-                <span><?php echo $type->name.' tại '.$district->name; ?></span>
+                <h1><span><?php echo $type->name.' tại '.$district->name; ?></span></h1>
             </div>
             <div class="boxnew">
                 <?php foreach($estates as $row):
@@ -58,7 +58,7 @@
                                 </span>
                                     <?php if($row->estateuser->mobile != ''): ?>
                                         <span class="phone">
-                                        <img src="<?php echo $base_url.'images/icon-phone.png' ?>" style="height: 15px; vertical-align: middle;"/><?=$row->estateuser->mobile;?>
+                                        <img alt="phone icon" src="<?php echo $base_url.'images/icon-phone.png' ?>" style="height: 15px; vertical-align: middle;"/><?=$row->estateuser->mobile;?>
                                     </span>
                                     <?php endif; ?>
                                 </p>

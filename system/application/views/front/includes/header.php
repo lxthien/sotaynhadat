@@ -1,18 +1,18 @@
 <div class="main-header">
     <div class="header">
-        <div class="logo"><a href="<?=$base_url;?>"><img src="<?=$base_url;?>images/logo_tet.png" alt=""/></a></div>
+        <div class="logo"><a href="<?=$base_url;?>"><img src="<?=$base_url;?>images/logo_tet.png" alt="nhà đất, bất động sản, logo sotaynhadat.vn"/></a></div>
         <div class="headerleft">
             <object style="display: block;margin-left: 12px;margin-top: 13px;" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
         codebase="http://download.macromedia.com/pub/shockwave/
 cabs/flash/swflash.cab#version=6,0,40,0"
-        width="630" height="80"
+        width="650" height="95"
         id="mymoviename">
     <param name="movie"
            value="<?=$base_url.$this->adverHeader->image;?>" />
     <param name="quality" value="high" />
     <param name="bgcolor" value="#ffffff" />
     <embed src="<?=$base_url.$this->adverHeader->image;?>" quality="high" bgcolor="#ffffff"
-           width="630" height="80"
+           width="650" height="95"
            name="mymoviename" align="" type="application/x-shockwave-flash"
            pluginspage="http://www.macromedia.com/go/getflashplayer">
     </embed>

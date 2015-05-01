@@ -40,4 +40,12 @@
         </div>
     </div>
     <div class="line3"></div>
+	<div class="sreentinnoibat" style="width:300px; float:left; margin-bottom:3px;">
+        <div class="tinkhacnoibat">
+            <a style="height: auto; color: #051c94; font-weight: bold;" href="http://sotaynhadat.vn/nha-dat-ban-da-nang" title="Đà Nẵng">
+                <p style="margin-left:10px; margin-top:9px; font-weight:normal;">Nhà đất bán tại Đà Nẵng</p>
+            </a>
+        </div>
+    </div>
+    <div class="line3"></div>
 </div>

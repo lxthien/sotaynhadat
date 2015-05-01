@@ -8,25 +8,25 @@
 
 <div class="main" style="width:960px;float:left;margin-top:5px; margin-left:12px; ">
 <div class="left">
-    <h1 style="margin-left:10px; margin-top:5px; font-size:17px; font-weight:bold; color:#000000;"><?=ucfirst($o->title);?></h1>
+    <h1 style="margin-left:10px; margin-top:5px; font-size:18px; font-weight:bold; color:#051c94;"><?=ucfirst($o->title);?></h1>
     <div class="location-estate" style="padding: 3px 0; float: left; width: 100%; margin-bottom: 10px;">
         <div style="margin-left: 10px; margin-right: 30px; float: left;">
-            <p style="float:left; margin-top:5px;">
+            <p style="float:left; margin-top:7px;">
                 <span class="bold" style="color: #a50000;">Quận/Huyện: </span>
-                <a style="color: #666674;" href="<?php echo $base_url.$o->estatetype->name_none.'/'.$o->estatedistrict->name_none.'/'.$o->estatecity->name_none; ?>"><?=$o->estatedistrict->name;?></a>
+                <a style="color: #051c94;" href="<?php echo $base_url.$o->estatetype->name_none.'/'.$o->estatedistrict->name_none.'/'.$o->estatecity->name_none; ?>"><?=$o->estatedistrict->name;?></a>
             </p>
         </div>
         <div style="margin-left: 15px; float: left;">
-            <p style="float:left; margin-top:5px;">
+            <p style="float:left; margin-top:7px;">
                 <span class="bold" style="color: #a50000;">Tỉnh/TP: </span>
-                <a style="color: #666674;" href="<?php echo $base_url.$o->estatecatalogue->name_none.'-'.$o->estatecity->name_none; ?>"><?=$o->estatecity->name;?></a>
+                <a style="color: #051c94;" href="<?php echo $base_url.$o->estatecatalogue->name_none.'-'.$o->estatecity->name_none; ?>"><?=$o->estatecity->name;?></a>
             </p>
         </div>
     </div>
 
     <div class="hotnew">
         <div class="sreennoidungchitiet" style="width:610px; float:left; margin-bottom:5px;">
-            <div class="developper-detail" style="color:#000000;width:100%;float:left;line-height: 20px;text-align: justify;font-size:13px;margin-top: 5px;">
+            <div class="developper-detail" style="color:#000000;width:100%;float:left;line-height: 20px;text-align: justify;font-size:14px;margin-top: 7px;">
                 <?=$o->description;?>
             </div>
             <link type="text/css" href="<?=$base_url?>images/js/pikachu/bottom.css" rel="stylesheet" />
@@ -68,9 +68,9 @@
             <div class="sreenttin add-left-right" style="width:610px;float:left;">
                 <div class="add-left">
                     <div class="social-detail">
-                        <span><a href="javascript:void(0)"><img src="<?php echo $base_url.'images/icon-save.png' ?>" alt=""/> &nbsp;Lưu tin</a></span>
-                        <span><a href="javascript:window.print()"><img src="<?php echo $base_url.'images/icon-print.png' ?>" alt=""/> &nbsp;In tin</a></span>
-                        <span><a href="javascript:void(0)"><img src="<?php echo $base_url.'images/icon-share.png' ?>" alt=""/> &nbsp;Chia sẻ tin</a>
+                        <span><a href="javascript:void(0)"><img src="<?php echo $base_url.'images/icon-save.png' ?>" alt="save icon"/> &nbsp;Lưu tin</a></span>
+                        <span><a href="javascript:window.print()"><img src="<?php echo $base_url.'images/icon-print.png' ?>" alt="print icon"/> &nbsp;In tin</a></span>
+                        <span><a href="javascript:void(0)"><img src="<?php echo $base_url.'images/icon-share.png' ?>" alt="share icon"/> &nbsp;Chia sẻ tin</a>
                             <ul>
                                 <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?=$base_url.$cate->name_none.'/'.$o->estatecity->name_none.'/'.$o->title_none?>.html" target="_blank">Chia sẻ qua Facebook</a></li>
                                 <li><a href="https://plus.google.com/share?url=<?=$base_url.$cate->name_none.'/'.$o->estatecity->name_none.'/'.$o->title_none?>.html" target="_blank">Chia sẻ qua Google +</a></li>
@@ -138,7 +138,7 @@
                             <p style="float:left; margin-top:7px; font-size: 14px;">
                                 <span>Thuộc dự án: </span>
                             <span class="style4">
-                                <a class="of-project" href="<?=base_url().'du-an/'.$project->newscatalogue->name_none.'/'.$o->article->title_none;?>.html" title="<?=$o->article->title_vietnamese;?>">
+                                <a target="_blank" class="of-project" href="<?=base_url().'du-an/'.$project->newscatalogue->name_none.'/'.$o->article->title_none;?>.html" title="<?=$o->article->title_vietnamese;?>">
                                     <?=$o->article->title_vietnamese;?>
                                 </a>
                             </span>
@@ -185,7 +185,7 @@
         <div class="cl"></div>
         <!-- ---------------------------------------------------------------------------------------------------------------- -->
         <div class="news-related">
-            <h3>Các tin khác</h3>
+            <h3>Các tin cùng khu vực và mức giá:</h3>
         </div>
         <div class="cl"></div>
         <?php foreach($estates_vip as $row):
@@ -293,7 +293,7 @@
                             </span>
                         <?php if($row->estateuser->mobile != ''): ?>
                             <span class="phone">
-                                <img src="<?php echo $base_url.'images/icon-telephone.png' ?>" style="height: 14px; vertical-align: top;"/><?=$row->estateuser->mobile;?>
+                                <img src="<?php echo $base_url.'images/icon-telephone.png' ?>" alt="camera icon" style="height: 14px; vertical-align: top;"/><?=$row->estateuser->mobile;?>
                             </span>
                         <?php endif; ?>
                     </p>
@@ -330,7 +330,7 @@
                 <div class="sreen1" style="width:17px; height:15px; float:left;">
                     <div class="icon">
                         <?php if($row->photo != null): ?>
-                            <a style="background: none;" href=""><img src="<?=$base_url?>images/iconcamera.png" alt=""/></a>
+                            <a style="background: none;" href=""><img src="<?=$base_url?>images/iconcamera.png" alt="camera icon"/></a>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -363,7 +363,7 @@
                         </span>
                         <?php if($row->estateuser->mobile != ''): ?>
                             <span class="phone">
-                                <img src="<?php echo $base_url.'images/icon-telephone.png' ?>" style="height: 14px; vertical-align: middle;"/><?=$row->estateuser->mobile;?>
+                                <img src="<?php echo $base_url.'images/icon-telephone.png' ?>" style="height: 14px; vertical-align: middle;" alt="telephone icon"/><?=$row->estateuser->mobile;?>
                             </span>
                         <?php endif; ?>
                     </p>

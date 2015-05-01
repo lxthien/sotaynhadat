@@ -11,7 +11,7 @@
         <!--hotnew-->
         <div class="hotnew">
             <div class="titlenew-add">
-                <span>Thống kê</span>
+                <span>Thống kê theo diện tích</span>
             </div>
             <div class="boxnew">
                 <?php foreach($estates as $row):

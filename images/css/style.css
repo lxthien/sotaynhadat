@@ -504,8 +504,8 @@ a:active {
 .tieudethamdinh a:hover{ width:343px; height:25px; color:#0078cc; text-decoration:underline;font-size:11px;font-weight:bold;}
 
 .boxnoibat{margin-bottom: 10px; width:312px;  float:left; border: 1px #CCCCCC  solid; background-color:#FFFFFF; padding-bottom:-5px;}
-.tinkhacnoibat a {float:left; width:312px; height:25px; color:#666666; font-size:13px; margin-bottom:5px;}
-.tinkhacnoibat a:hover { float:left;width:312px; height:25px;color:#0078cc; font-size:13px;margin-bottom:5px;}
+.tinkhacnoibat a {float:left; width:290px; height:25px; color:#666666; font-size:13px; margin-bottom:5px;}
+.tinkhacnoibat a:hover { float:left;width:290px; height:25px;color:#0078cc; font-size:13px;margin-bottom:5px;}
 .tendiaphuong a{ color:#0078cc; font-size:12px; font-weight:bold; margin-left:5px; margin-top:-2px; float:left;}
 .tendiaphuong a:hover{ color:#0078cc; font-size:12px; text-decoration:underline; font-weight:bold;margin-left:5px; margin-top:-2px;float:left;}
 .nhinrathegioi{width:160px;   float:left;border: 1px #CCCCCC  solid; border-bottom-color: #a2a2a2; border-bottom-width:5px;  background-color:#FFFFFF; padding-bottom:5px;}
@@ -1587,8 +1587,8 @@ p.notice-msg{
 .developper-detail{height: auto;padding: 5px 0px;overflow: hidden;padding-right: 10px;}
 .developper-detail p{margin-bottom: 10px;}
 .slide-nha-dat{margin-left: 0px;width: 100%;float: left;}
-.add-left{float: left; width: 360px; padding-left: 0px; padding-right: 10px; font-family: 'Arial';}
-.add-right{float: left;width: 240px;padding-left: 0px;}
+.add-left{float: left; width: 330px; padding-left: 0px; padding-right: 10px; font-family: 'Arial';}
+.add-right{float: left;width: 270px;padding-left: 0px;}
 .tinh, .ms{width: 100%;}
 .jcarousel-skin-pika{width: 585px; margin: 0 auto 10px;}
 
@@ -1610,7 +1610,7 @@ p.notice-msg{
 .social-detail span ul li a:hover{text-decoration: underline;}
 
 .add-right h3{height: 40px; color: #292929; font-size: 18px; font-family: Helvetica,Arial,sans-serif; line-height: 40px; font-weight: 400;}
-.right-contact-customer{border-radius: 5px; background-color: #f7f7f7; border: 1px solid #9a9696; float: left; padding: 10px 5px; width: 228px;}
+.right-contact-customer{border-radius: 5px; background-color: #f7f7f7; border: 1px solid #9a9696; float: left; padding: 10px 5px; width: 258px;}
 
 .news-related h3{color: #292929; font-size: 18px; font-family: Helvetica,Arial,sans-serif; font-weight: 600; border-bottom: 1px solid #000000; padding-bottom: 5px; margin-bottom: 10px; margin-top: 30px;}
 

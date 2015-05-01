@@ -12,7 +12,7 @@
     <div class="left estates">
         <div class="hotnew">
 			<div class="titlenew-add">
-				<span><?php echo $type->name.' '.$atAddress; ?></span>
+				<h1><span><?php echo $type->name.' '.$atAddress; ?></span></h1>
 			</div>
             <div class="boxnew">
                 <?php foreach($estates as $row):

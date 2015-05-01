@@ -60,7 +60,7 @@
                                 </span>
                                 <?php if($row->estateuser->mobile != ''): ?>
                                     <span class="phone">
-                                        <img src="<?php echo $base_url.'images/icon-phone.png' ?>" style="height: 15px; vertical-align: middle;"/><?=$row->estateuser->mobile;?>
+                                        <img alt="phone icon" src="<?php echo $base_url.'images/icon-phone.png' ?>" style="height: 15px; vertical-align: middle;"/><?=$row->estateuser->mobile;?>
                                     </span>
                                 <?php endif; ?>
                             </p>

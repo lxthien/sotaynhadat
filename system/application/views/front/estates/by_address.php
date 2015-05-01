@@ -11,7 +11,7 @@
     <div class="left estates">
         <div class="hotnew">
             <div class="titlenew-add">
-                <span><?php echo $category->name.' tại '.$district->name; ?></span>
+                <h1><span><?php echo $category->name.' tại '.$district->name; ?></span></h1>
             </div>
             <div class="boxnew">
                 <?php foreach($estates as $row):

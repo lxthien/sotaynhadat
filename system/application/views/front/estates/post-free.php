@@ -390,10 +390,11 @@ function load_district()
         <div style="width: 920px; margin: 0 auto;">
             <span style="margin-top: 30px; display: block;text-align: left;margin-bottom: 10px; margin-left: 0px; color: <?=$type==1 ? '#000' : 'red';?>;font-size: 14px;line-height: 20px;">
                 <?=$msg;?>
-            </span>
-            <p style="text-align:center;color:#0000;margin-top:0px; font-size: 15px; line-height: 20px; display: <?php echo $type==1?'none':'block'; ?>">
-                Tại đây, bạn có thể đăng tin mà không cần đăng nhập tài khoản thành viên.</br> 
-    			Chúc bạn mua may bán đắt!
+            </span> 
+				<p style="text-align:center;color:#0000;margin-top:0px; font-size: 15px; line-height: 25px; display: <?php echo $type==1?'none':'block'; ?>">
+				Tại đây, bạn có thể đăng tin mà không cần tài khoản thành viên.</br>
+				Nếu bạn đã đăng ký, vui lòng truy cập trang <a style="color: #018e07;font-weight: bolder;" href="http://sotaynhadat.vn/dang-nhap">đăng nhập</a>.</br>
+    			Tin đăng của bạn sẽ được chúng tôi kích hoạt nhanh chóng. Chúc bạn giao dịch nhà đất hiệu quả!
             </p>
             </br>
             <div style="display: <?php echo $type==1?'none':'block'; ?>" class="register login post">
@@ -496,22 +497,23 @@ function load_district()
                                 <select class="price-type price-type-01" name="price_type" style="width: 100px;">
                                     <option <?=$o->price_type==1?'selected="selected"':'';?> value="1">Triệu</option>
                                     <option <?=$o->price_type==2?'selected="selected"':'';?> value="2">Tỷ</option>
-                                    <option <?=$o->price_type==3?'selected="selected"':'';?> value="3">Cây vàng</option>
-                                    <option <?=$o->price_type==4?'selected="selected"':'';?> value="4">USD</option>
-                                    <option <?=$o->price_type==5?'selected="selected"':'';?> value="5">USD/m2</option>
-                                    <option <?=$o->price_type==6?'selected="selected"':'';?> value="6">Nghìn/m2</option>
-                                    <option <?=$o->price_type==7?'selected="selected"':'';?> value="7">Triệu/m2</option>
+                                    <option <?=$o->price_type==3?'selected="selected"':'';?> value="3">Triệu/m2</option>
+									<option <?=$o->price_type==4?'selected="selected"':'';?> value="4">Cây vàng</option>
+                                    <option <?=$o->price_type==5?'selected="selected"':'';?> value="5">USD</option>
+                                    <option <?=$o->price_type==6?'selected="selected"':'';?> value="6">USD/m2</option>
+                                    <option <?=$o->price_type==7?'selected="selected"':'';?> value="7">Nghìn/m2</option>
                                     <option <?=$o->price_type==8?'selected="selected"':'';?> value="8">Chỉ vàng/m2</option>
                                     <option <?=$o->price_type==9?'selected="selected"':'';?> value="9">Cây vàng/m2</option>
                                 </select>
                                 <select class="price-type price-type-02" name="price_type_2" style="width: 100px; display: none;">
-                                    <option <?=$o->price_type==10?'selected="selected"':'';?> value="10">Nghìn/tháng</option>
-                                    <option <?=$o->price_type==11?'selected="selected"':'';?> value="11">Triệu/tháng</option>
-                                    <option <?=$o->price_type==12?'selected="selected"':'';?> value="12">USD/tháng</option>
+                                    <option <?=$o->price_type==10?'selected="selected"':'';?> value="10">Triệu/tháng</option>
+									<option <?=$o->price_type==11?'selected="selected"':'';?> value="11">Triệu</option>
+									<option <?=$o->price_type==12?'selected="selected"':'';?> value="12">USD/tháng</option>
                                     <option <?=$o->price_type==13?'selected="selected"':'';?> value="13">Triệu/năm</option>
-                                    <option <?=$o->price_type==14?'selected="selected"':'';?> value="14">Nghìn/m2/tháng</option>
-                                    <option <?=$o->price_type==15?'selected="selected"':'';?> value="15">Triệu/m2/tháng</option>
-                                    <option <?=$o->price_type==16?'selected="selected"':'';?> value="16">USD/m2/tháng</option>
+									<option <?=$o->price_type==14?'selected="selected"':'';?> value="14">Nghìn/tháng</option>
+                                    <option <?=$o->price_type==15?'selected="selected"':'';?> value="15">Nghìn/m2/tháng</option>
+                                    <option <?=$o->price_type==16?'selected="selected"':'';?> value="16">Triệu/m2/tháng</option>
+                                    <option <?=$o->price_type==17?'selected="selected"':'';?> value="17">USD/m2/tháng</option>
                                 </select>
                             </div>
                             <div class="select-price">
@@ -557,13 +559,13 @@ function load_district()
                                 </span>
                             </div>
                             <div class="area-post-02" style="padding-top: 3px;">
-                                <span class="rowLabel">Số nhà, Tên đường: </span>
+                                <span class="rowLabel">Số nhà, Tên đường (Nếu có): </span>
                                 <span class="rowInput"><input style="width: 444px;" type="text" name="address" id="address" value="<?=$o->address;?>"/></span>
                             </div>
                         </div>
                         <span class="rowLabel">Tiêu đề: <span style="display: inline-block; color: red;">(*)</span></span>
                         <span class="rowInput" style="width: 580px;"><input maxlength="100" type="text" name="title" id="title" value="<?=$o->title;?>" /></span>
-                        <span style="color: #5a5a5a; font-size: 12px;" class="rowLabel">(Vui lòng nhập tiêu đề, tối thiểu 30 ký tự, tối đa 100 ký tự, không sử dụng ký tự đặc biệt: !,@,#,$...)</span> <span> </span>
+                        <span style="color: #5a5a5a; font-size: 12px;" class="rowLabel">(Vui lòng nhập tiêu đề tiếng Việt có dấu để tin đăng được kích hoạt nhanh hơn, tối thiểu 30 ký tự, tối đa 100 ký tự.)</span> <span> </span>
                         <span class="rowLabel">Hình ảnh: <span style="display: inline-block; color: red;">(*)</span></span>
                         <span class="rowInput muti-images">
                             <div class="row-image">
@@ -609,8 +611,8 @@ function load_district()
                         </div>
                         <span class="rowInput" style="float: left;" >
                             <div class="area-post">
-                                        <span class="rowLabel">Mã xác nhận: <span
-                                                style="display: inline-block; color: red;">(*)</span></span>
+                                        <span class="rowLabel">Mã xác nhận: <span style="display: inline-block; color: red;">(*)</span>
+										<span style="color: #5a5a5a; font-size: 12px;" class="rowLabel">(Mã xác nhận không phân biệt chữ hoa và chữ thường.)</span></span> 
                                         <span class="rowInput row-capcha" style="position: relative;">
                                             <input style="width: 200px;float: left;margin-right: 5px;height: 28px;" type="text" name="captcha_code" id="captcha_code" value=""/>
                                             <img style="float: left;" id="captcha" height="30" src="<?= $base_url; ?>securimage/securimage_show.php" alt="CAPTCHA Image"/>
@@ -628,6 +630,7 @@ function load_district()
                             <input type="submit" class="button" value="Đăng tin" />
                         </span>
                         <div class="cl"></div>
+						<span style="color: #0000; line-height:20px; margin-top: 7px; font-size: 14px;" class="rowLabel">Nếu cần hỗ trợ, Quý khách hãy liên hệ với Chúng tôi theo số: 0168 200 0080 | Email: hotro@sotaynhadat.vn để được trợ giúp nhanh chóng!</span>
                     </form>
                 </div>
             </div>
