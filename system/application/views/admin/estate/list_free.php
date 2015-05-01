@@ -30,9 +30,10 @@
             	<th width="30"><div align="center">Mã tin</div></th>
                 <th width="120"><?=$menu_active?></th>
                 <th width="80">Menu</th>
+                <th width="80">Phone</th>
             	<th width="80"><div align="center">Active</div></th>
-            	<th width="50"><div align="center">Tin Vip</div></th>
-            	<th width="50"><div align="center">Chính chủ</div></th>
+            	<th width="50"><div align="center">Vip</div></th>
+            	<th width="50"><div align="center">CC</div></th>
                 <th width="50"><div align="center">Ngày tạo</div></th>
                 <th width="50"><div align="center">Công cụ</div></th>
             </tr>
@@ -47,7 +48,8 @@
                     </div>   
                 </td>
                 <td><?=$row->title?> <?php if($row->photo != null): ?><img title="Có hình đại diện" src="<?php echo base_url().'images/iconcamera.png'; ?>"/><?php endif; ?> <?php if ($row->article_id > 0): ?><img title="Có dự án" style="width: 15px;" src="<?php echo base_url().'images/projects.png'; ?>"/><?php endif; ?></td>
-                <td><?=$row->estatetype->name?></td>
+                <td><?=$row->estatetype->name; ?></td>
+                <td><?=$row->mobile_contact; ?></td>
                 <td>
                     <div align="center">
                         <?php if($row->active==0)
@@ -92,7 +94,7 @@
             </tr>
             <?php endforeach; ?>
             <tr>
-                <td colspan="7">
+                <td colspan="10">
                     <?php echo $this->pagination->create_links();?>
                 </td>
             </tr>             

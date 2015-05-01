@@ -70,8 +70,9 @@
                 <th width="120"><?=$menu_active?></th>
                 <th width="80">Menu</th>
             	<th width="80"><div align="center">Thành viên</div></th>
-            	<th width="50"><div align="center">Tin Vip</div></th>
-            	<th width="50"><div align="center">Chính chủ</div></th>
+                <th width="80"><div align="center">Phone</div></th>
+            	<th width="50"><div align="center">Vip</div></th>
+            	<th width="50"><div align="center">CC</div></th>
                 <th width="50"><div align="center">Ngày tạo</div></th>
                 <th width="50"><div align="center">Công cụ</div></th>
             </tr>
@@ -91,6 +92,9 @@
                     <div align="center">
                         <a href="<?php echo $this->admin_url.'estateusers/listEstates/'.$row->estateuser->id; ?>"><?=$row->estateuser->where('id',$row->estateuser_id)->get()->name?></a>
                     </div>
+                </td>
+                <td>
+                    <div align="center"><?php echo $row->estateuser->mobilePhone; ?></div>
                 </td>
                 <td>
                     <div align="center">
@@ -127,7 +131,7 @@
             </tr>
             <?php endforeach; ?>
             <tr>
-                <td colspan="9">
+                <td colspan="10">
                     <?php echo $this->pagination->create_links();?>
                 </td>
             </tr>             
