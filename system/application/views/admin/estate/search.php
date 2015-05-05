@@ -1,4 +1,26 @@
+<link href="<?=$base_url;?>images/css/tooltip2/jquery.qtip.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="<?= $base_url?>images/js/tooltip2/jquery.qtip.js"></script>
+<script type="text/javascript" src="<?= $base_url?>images/js/tooltip2/imagesloaded.pkg.min.js"></script>
+
 <script type="text/javascript" src="<?= $base_url?>js/main.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.tooltip').each(function() { // Notice the .each() loop, discussed below
+        $(this).qtip({
+            content: {
+                text: $(this).next('div') // Use the "div" element next to this for the content
+            },
+            style: {
+                classes: 'popup-tooltip',
+                width: 450,
+            }
+        });
+    });
+});
+</script>
+
 <div id="portlets">
 <div class="column"> 
 </div>
@@ -72,9 +94,8 @@
                 <th width="120"><?=$menu_active?></th>
                 <th width="50">Menu</th>
                 <th width="50">Diện tích</th>
-                <th width="50">Mức giá</th>
+                <th width="50">Giá</th>
             	<th width="60"><div align="center">Thành viên</div></th>
-                <th width="60"><div align="center">Phone</div></th>
             	<th width="30"><div align="center">Vip</div></th>
             	<th width="30"><div align="center">CC</div></th>
                 <th width="30"><div align="center">Ngày tạo</div></th>
@@ -90,7 +111,13 @@
                         <?=$row->code?>
                     </div>   
                 </td>
-                <td><?=$row->title?> <?php if($row->photo != null): ?><img title="Có hình đại diện" src="<?php echo base_url().'images/iconcamera.png'; ?>"/><?php endif; ?> <?php if($row->Estate_photo->result_count() > 0): ?><img title="Có danh sách hình slide" src="<?php echo base_url().'images/slides_stack.png'; ?>"/><?php endif; ?></td>
+                <td>
+                    <span class="tooltip"><?=$row->title?></span>
+                    <div class="hidden"><?php echo $row->description; ?></div>
+                    <?php if($row->photo != null): ?><img title="Có hình đại diện" src="<?php echo base_url().'images/iconcamera.png'; ?>"/><?php endif; ?>
+                    <?php if($row->Estate_photo->result_count() > 0): ?><img title="Có danh sách hình slide" src="<?php echo base_url().'images/slides_stack.png'; ?>"/><?php endif; ?>
+                    <?php if ($row->article_id > 0): ?><img title="Có dự án" style="width: 15px;" src="<?php echo base_url().'images/projects.png'; ?>"/><?php endif; ?>
+                </td>
                 <td><?=$row->estatetype->name?></td>
                 <td><?=$row->area_text;?> m<sup>2</sup></td>
                 <td><?=$row->price_text.' '.getpricetype($row->price_type);?></td>
@@ -98,9 +125,6 @@
                     <div align="center">
                         <a href="<?php echo $this->admin_url.'estateusers/listEstates/'.$row->estateuser->id; ?>"><?=$row->estateuser->where('id',$row->estateuser_id)->get()->name?></a>
                     </div>
-                </td>
-                <td>
-                    <div align="center"><?php echo $row->estateuser->mobilePhone; ?></div>
                 </td>
                 <td>
                     <div align="center">
@@ -137,7 +161,7 @@
             </tr>
             <?php endforeach; ?>
             <tr>
-                <td colspan="12">
+                <td colspan="11">
                     <?php echo $this->pagination->create_links();?>
                 </td>
             </tr>             

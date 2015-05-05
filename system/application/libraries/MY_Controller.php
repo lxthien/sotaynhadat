@@ -57,6 +57,7 @@ class MY_Controller extends Controller{
             //LOAD HELPER
             $this->load_admin_resource();
 			 //check maintenance admin , only webmaster can login
+            $this->resetNewsViewMost();
 	 	}
 	 	else
         {
@@ -148,7 +149,7 @@ class MY_Controller extends Controller{
             $projectHot->where('hot',1);
             $projectHot->where_in('newscatalogue_id',$arrayCateNewsId);
             $projectHot->order_by('created', 'desc');
-            $projectHot->get(8);
+            $projectHot->get(3);
             $this->projectHot = $projectHot;
 
             //get all housesale
@@ -561,4 +562,43 @@ class MY_Controller extends Controller{
         if(!in_array($this->logged_in_user->adminrole_id,$role))
             show_error('Bạn không có quyền truy cập chức năng này.');
     }
+
+    function resetNewsViewMost(){
+        try {
+            $dateNow = new DateTime(date('Y-m-d'));
+            $dateStart = new DateTime(getconfigkey('date_start_reset_news'));
+            $interval = $dateNow->diff($dateStart);
+            if (($interval->days)%7 == 0) {
+                $cauhinh = new Cauhinh();
+                $cauhinh->where('fieldname', 'date_reset_news')->get();
+                
+                if (getconfigkey('date_reset_news') == 0) {
+                    $news = new Article();
+                    $news->where('recycle', 0);
+                    $news->where_in('newscatalogue_id', array(71, 73, 72, 74, 75, 77, 80, 81, 82, 78, 79));
+                    $news->get_iterated();
+
+                    foreach ($news as $row) {
+                        $o = new Article($row->id);
+                        $o->view_count = 0;
+                        $o->save();
+                        $o->clear();
+                    }
+
+                    $cauhinh->value = 1;
+                    $cauhinh->save();
+                }
+            } else {
+                if (getconfigkey('date_reset_news') != 0) {
+                    $cauhinh = new Cauhinh();
+                    $cauhinh->where('fieldname', 'date_reset_news')->get();
+                    $cauhinh->value = 0;
+                    $cauhinh->save();
+                }
+            }
+        } catch (Exception $e) {
+            echo 'Caught exception: ',  $e->getMessage(), "\n";
+        }
+    }
+
 }

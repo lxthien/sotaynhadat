@@ -6,7 +6,6 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 CKEDITOR.editorConfig = function( config )
 {
     config.extraPlugins = 'mediaembed'
-    config.filebrowserUploadUrl = 'http://sannhadat.website4b.com/resource/kfm'
 	config.toolbar_Full =
     [
     ['Source','-','Save','NewPage','Preview','-','Templates'],

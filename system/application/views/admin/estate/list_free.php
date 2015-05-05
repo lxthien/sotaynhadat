@@ -1,3 +1,24 @@
+<link href="<?=$base_url;?>images/css/tooltip2/jquery.qtip.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="<?= $base_url?>images/js/tooltip2/jquery.qtip.js"></script>
+<script type="text/javascript" src="<?= $base_url?>images/js/tooltip2/imagesloaded.pkg.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.tooltip').each(function() { // Notice the .each() loop, discussed below
+        $(this).qtip({
+            content: {
+                text: $(this).next('div') // Use the "div" element next to this for the content
+            },
+            style: {
+                classes: 'popup-tooltip',
+                width: 450,
+            }
+        });
+    });
+});
+</script>
+
 <div id="portlets">
 <div class="column"> 
 </div>
@@ -30,7 +51,7 @@
             	<th width="30"><div align="center">Mã tin</div></th>
                 <th width="120"><?=$menu_active?></th>
                 <th width="80">Menu</th>
-                <th width="80">Phone</th>
+                <th width="80">Giá</th>
             	<th width="80"><div align="center">Active</div></th>
             	<th width="50"><div align="center">Vip</div></th>
             	<th width="50"><div align="center">CC</div></th>
@@ -47,9 +68,14 @@
                         <?=$row->code?>
                     </div>   
                 </td>
-                <td><?=$row->title?> <?php if($row->photo != null): ?><img title="Có hình đại diện" src="<?php echo base_url().'images/iconcamera.png'; ?>"/><?php endif; ?> <?php if ($row->article_id > 0): ?><img title="Có dự án" style="width: 15px;" src="<?php echo base_url().'images/projects.png'; ?>"/><?php endif; ?></td>
+                <td>
+                    <span class="tooltip"><?=$row->title?></span>
+                    <div class="hidden"><?php echo $row->description; ?></div>
+                    <?php if($row->photo != null): ?><img title="Có hình đại diện" src="<?php echo base_url().'images/iconcamera.png'; ?>"/><?php endif; ?>
+                    <?php if ($row->article_id > 0): ?><img title="Có dự án" style="width: 15px;" src="<?php echo base_url().'images/projects.png'; ?>"/><?php endif; ?>
+                </td>
                 <td><?=$row->estatetype->name; ?></td>
-                <td><?=$row->mobile_contact; ?></td>
+                <td><?php echo $row->price_text.' '.getpricetype($row->price_type);?></td>
                 <td>
                     <div align="center">
                         <?php if($row->active==0)

@@ -656,8 +656,8 @@ a:active {
 
 /*  cac trang chuc nang*/
 .titlenew{width:auto;height:29px; padding-left:10px; padding-right:10px;float:left; background-color:#0078cc; margin-left:15px; margin-top:-14px;}
-.titlenew-add span{ display: block; text-align: left; padding: 5px 0; color: #292929; font-size: 20px; font-weight: bolder; border-bottom: 1px solid #292929;}
-.titlenew-add h1{ display: block; text-align: center; padding: 8px 0; color: #0270bc; font-size: 20px; font-weight: bolder; border-bottom: 8px solid #0f9502;}
+.titlenew-add span{display: block; text-align: left; padding: 5px 0; color: #292929; font-size: 20px; font-weight: bolder; border-bottom: 1px solid #292929;}
+.titlenew-add h1{display: block; text-align: left; padding: 5px 0; color: #292929; font-size: 20px; font-weight: bolder; border-bottom: 1px solid #292929;}
 .titlenew2{ width:auto; padding-left:10px; padding-right:10px; float:left; height:29px; background-color:#028287; margin-left:20px; margin-top:-14px;}
 
 .tinxemnhieu a {float:left; width:343px; height:25px; color:#666666; font-size:13px; margin-bottom:5px;}

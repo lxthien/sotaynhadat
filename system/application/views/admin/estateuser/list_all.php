@@ -9,9 +9,10 @@
 		<thead>
 			<tr>
             	<th width="20">TT</th>
-            	<th width="100"><?=$menu_active?></th>
-            	<th width="80"><div align="center">Số điện thoại</div></th>
-                <th width="100"><div align="left">Email</div></th>
+            	<th width="80"><?=$menu_active?></th>
+            	<th width="80"><div align="center">Điện thoại</div></th>
+                <th width="80"><div align="center">Di động</div></th>
+                <th width="80"><div align="left">Email</div></th>
                 <!--<th width="50"><div align="center">Vip</div></th>-->
                 <th width="50"><div align="center">Tổng số tin</div></th>
                 <th width="50"><div align="center">Công cụ</div></th>
@@ -24,7 +25,12 @@
                 <td><a href="<?php echo $this->admin_url.'estateusers/listEstates/'.$row->id; ?>" title="Xem danh sách tin đã đăng"><?=$row->firstname.' '.$row->name;?></a></td>
                 <td>
                     <div align="center">
-                        <?=$row->mobilePhone?>
+                        <?=$row->mobilePhone; ?>
+                    </div>   
+                </td>
+                <td>
+                    <div align="center">
+                        <?=$row->mobile; ?>
                     </div>   
                 </td>
                 <td>

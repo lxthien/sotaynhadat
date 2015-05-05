@@ -3,9 +3,9 @@
 
     <div class="boxtimkiembds">
         <span class="title-top-box">Tìm kiếm bất động sản</span>
-        <div class="sreenboxseach2" style=" width:310px;  margin-bottom:20px; float:left;">
+        <div class="sreenboxseach2" style="width:300px;  margin-bottom:20px; float:left;">
             <form action="<?=$base_url?>tim-kiem-bat-dong-san" method="post">
-                <div  class="boxseach"  style=" width:100px; float:left; margin-left:60px;">
+                <div  class="boxseach" style="width:100px; float:left; margin-left:60px;">
                     <label>
                         <input type="radio" style="float:left; margin-top:10px;" name="estatecatalogue_id" value="1"/>
                         <p style="font-weight:bold; font-size:14px; color:#CC0000; float:left; margin-top:8px; margin-left:5px;">Mua - Bán</p>
@@ -17,8 +17,8 @@
                         <p style="font-weight:bold; font-size:14px; color:#CC0000; float:left; margin-top:8px; margin-left:5px;">Cho Thuê</p>
                     </label>
                 </div>
-                <div class="sreenseachtimkiembds1 formtimkiem" style="width:310px; height:25px; float:left; margin-bottom:3px; background: none; margin-left: 0;">
-                    <select name="estatetype_id" id="estatetype_id" size="1" style="float:left; margin-right:5px; margin-left:13px; width:140px;  height:23px; margin-top:10px; margin-bottom:5px;  border:1px  #CCCCCC solid;">
+                <div class="sreenseachtimkiembds1 formtimkiem" style="width:300px; height:25px; float:left; margin-bottom:3px; background: none; margin-left: 0;">
+                    <select name="estatetype_id" id="estatetype_id" size="1" style="float:left; margin-right:5px; margin-left:8px; width:140px;  height:23px; margin-top:10px; margin-bottom:5px;  border:1px  #CCCCCC solid;">
                         <option value="" selected="selected">Chọn Loại nhà đất</option>
                     </select>
                     <select name="estatecity_id" id="estatecity_id" size="1" style="float:left; width:140px; margin-right:5px;  height:23px; margin-bottom:5px; margin-top:10px;  border:1px  #CCCCCC solid;">
@@ -28,8 +28,8 @@
                         <?php endforeach; unset($row); ?>
                     </select>
                 </div>
-                <div class="sreenseachtimkiembds1" style="width:310px; height:25px; float:left; margin-bottom:3px;">
-                    <select name="estatedistrict_id" id="estatedistrict_id" size="1" style="float:left; width:140px; margin-right:5px; margin-left:13px;  height:23px; margin-top:10px; margin-bottom:5px;  border:1px  #CCCCCC solid;" >
+                <div class="sreenseachtimkiembds1" style="width:300px; height:25px; float:left; margin-bottom:3px;">
+                    <select name="estatedistrict_id" id="estatedistrict_id" size="1" style="float:left; width:140px; margin-right:5px; margin-left:8px;  height:23px; margin-top:10px; margin-bottom:5px;  border:1px  #CCCCCC solid;" >
                         <option value="">Chọn Quận/Huyện</option>
                     </select>
                     <select name="estatearea_id" id="estatearea_id" size="1" style="float:left; width:140px; margin-right:5px;  height:23px; margin-bottom:5px; margin-top:10px;  border:1px  #CCCCCC solid;" >
@@ -40,8 +40,8 @@
                         <?php endforeach; unset($row); ?>
                     </select>
                 </div>
-                <div class="sreenseachtimkiembds1" style="width:310px; height:25px; float:left; margin-bottom:13px;">
-                    <select name="estateprice_id" id="estateprice_id" size="1" style="float:left; width:140px; margin-right:5px; margin-left:13px;  height:23px; margin-top:10px; margin-bottom:5px;  border:1px  #CCCCCC solid;" >
+                <div class="sreenseachtimkiembds1" style="width:300px; height:25px; float:left; margin-bottom:13px;">
+                    <select name="estateprice_id" id="estateprice_id" size="1" style="float:left; width:140px; margin-right:5px; margin-left:8px;  height:23px; margin-top:10px; margin-bottom:5px;  border:1px  #CCCCCC solid;" >
                         <option value="" selected="selected">Chọn Mức giá</option>
                     </select>
                     <select name="estatedirection_id" id="estatedirection_id" size="1" style="float:left; width:140px; margin-right:5px;  height:23px; margin-bottom:5px; margin-top:10px;  border:1px  #CCCCCC solid;" >
@@ -57,7 +57,7 @@
             </form>
         </div>
     </div>
-    <div class="sreenboxtwen" style="width:316px;  float:left;">
+    <div class="sreenboxtwen" style="width:316px; float:left; display: none;">
         <div class="nhinrathegioi">
             <span class="title-top-box">Tư vấn luật</span>
             <?php foreach($this->legalAdvices as $row): ?>

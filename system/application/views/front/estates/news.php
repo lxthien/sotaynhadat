@@ -11,7 +11,7 @@
 <div class="left estates">
     <div class="hotnew border-left-right-none">
         <div class="titlenew-add">
-            <span><?php echo $estatesCategoryName.' '.$atAddress; ?></span>
+            <h1><?php echo $estatesCategoryName.' '.$atAddress; ?></h1>
         </div>
         <div class="boxnew">
             <?php if($estates->result_count() > 0){ ?>

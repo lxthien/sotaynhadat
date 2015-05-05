@@ -1,3 +1,24 @@
+<link href="<?=$base_url;?>images/css/tooltip2/jquery.qtip.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="<?= $base_url?>images/js/tooltip2/jquery.qtip.js"></script>
+<script type="text/javascript" src="<?= $base_url?>images/js/tooltip2/imagesloaded.pkg.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.tooltip').each(function() { // Notice the .each() loop, discussed below
+            $(this).qtip({
+                content: {
+                    text: $(this).next('div') // Use the "div" element next to this for the content
+                },
+                style: {
+                    classes: 'popup-tooltip',
+                    width: 450,
+                }
+            });
+        });
+    });
+</script>
+
 <div id="portlets">
     <div class="column">
     </div>
@@ -24,7 +45,11 @@
                             <td><div align="center"><?=$i?></div></td>
                             <td>
                                 <div align="left">
-                                    <a href="<?=$base_url.$row->estatecatalogue->name_none.'/'.$row->estatecity->name_none.'/'.$row->title_none?>.html" title="Xem chi tiết" target="_blank"><?=$row->title?></a>
+                                    <a class="tooltip" href="<?=$base_url.$row->estatecatalogue->name_none.'/'.$row->estatecity->name_none.'/'.$row->title_none?>.html" title="Xem chi tiết" target="_blank"><?=$row->title?></a>
+                                    <div class="hidden"><?php echo $row->description; ?></div>
+                                    <?php if($row->photo != null): ?><img title="Có hình đại diện" src="<?php echo base_url().'images/iconcamera.png'; ?>"/><?php endif; ?>
+                                    <?php if($row->Estate_photo->result_count() > 0): ?><img title="Có danh sách hình slide" src="<?php echo base_url().'images/slides_stack.png'; ?>"/><?php endif; ?>
+                                    <?php if ($row->article_id > 0): ?><img title="Có dự án" style="width: 15px;" src="<?php echo base_url().'images/projects.png'; ?>"/><?php endif; ?>
                                 </div>
                             </td>
                             <td>

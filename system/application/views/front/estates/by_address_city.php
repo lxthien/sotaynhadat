@@ -10,7 +10,7 @@
     <div class="left estates">
         <div class="hotnew">
             <div class="titlenew-add">
-                <h1><span><?php echo $category->name.' tại '.$city->name;?></span></h1>
+                <h1><?php echo $category->name.' tại '.$city->name;?></h1>
             </div>
             <div class="boxnew">
                 <?php foreach($estates as $row):
