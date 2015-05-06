@@ -193,8 +193,10 @@
                             toolbar : [ 
                             ['Source', '-', 'Cut', 'Copy', 'Paste', '-', 'TextColor', 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'NumberedList', 'BulletedList', 'Outdent', 'Indent', '-', 'Link', 'Unlink', 'Anchor', '-' ],
                             ['Styles', 'Format', 'Font', 'FontSize', '-', 'Image', 'Flash', 'Table', 'HorizontalRule','MediaEmbed','flvPlayer']],
-                            height:350,
-                            width: 750
+                            height: 350,
+                            width: 750,
+							htmlEncodeOutput: false,
+                            entities: false
                         });
                 </script>
             </td>

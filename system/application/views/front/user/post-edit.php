@@ -615,8 +615,10 @@ function addCommas(nStr)
                                 editor_description=CKEDITOR.replace( 'description',
                                     {
                                         toolbar : [],
-                                        height:200,
-                                        resize_enabled: false
+                                        height: 200,
+                                        resize_enabled: false,
+										htmlEncodeOutput: false,
+										entities: false
                                     });
                             </script>
                         </span>

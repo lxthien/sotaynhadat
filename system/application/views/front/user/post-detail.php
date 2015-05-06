@@ -240,7 +240,7 @@
                             <a href="javascript:void(0)">|</a>
                             <a href="<?php echo $base_url.$row->estatecatalogue->name_none.'-'.$row->estatecity->name_none; ?>"><?=$row->estatecity->name;?></a>
                         </p>
-                        <p style="text-align:justify;color:#333333; line-height: 18px;">
+                        <p class="des">
                             <?=strlen(strip_tags($row->description)) < 300 ? strip_tags($row->description): cut_string2(strip_tags($row->description), 300).' ...';?>
                         </p>
                         <p class="date"><?php echo date('d/m/Y',strtotime($date)); ?></p>
@@ -302,7 +302,7 @@
                         <a href="javascript:void(0)">|</a>
                         <a href="<?php echo $base_url.$row->estatecatalogue->name_none.'-'.$row->estatecity->name_none; ?>"><?=$row->estatecity->name;?></a>
                     </p>
-                    <p style="text-align:justify;color:#333333; line-height: 18px;">
+                    <p class="des">
                         <?=strlen(strip_tags($row->description)) < 300 ? strip_tags($row->description): cut_string2(strip_tags($row->description), 300).' ...';?>
                     </p>
                     <p class="date"><?php echo date('d/m/Y',strtotime($date)); ?></p>
@@ -372,7 +372,7 @@
                         <a href="javascript:void(0)">|</a>
                         <a href="<?php echo $base_url.$row->estatecatalogue->name_none.'-'.$row->estatecity->name_none; ?>"><?=$row->estatecity->name;?></a>
                     </p>
-                    <p style="text-align:justify;color:#333333; line-height: 18px;">
+                    <p class="des">
                         <?=strlen(strip_tags($row->description)) < 300 ? strip_tags($row->description): cut_string2(strip_tags($row->description), 300).' ...';?>
                     </p>
                     <p class="date"><?php echo date('d/m/Y',strtotime($date)); ?></p>

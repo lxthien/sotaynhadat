@@ -485,7 +485,7 @@ class fuser extends MY_Controller{
         $keyword = explode(' ', $estate->title);
 
         $this->page_title = $estate->title.' | SotayNhadat.vn';
-        $this->page_description = cut_string($estate->description,160);
+        $this->page_description = cut_string(str_replace(array("\r", "\n"), '', strip_tags($estate->description)), 150);
         $this->page_keyword = implode(', ', $keyword);
 
         /*Get estate related vip*/

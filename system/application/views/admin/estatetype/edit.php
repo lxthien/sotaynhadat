@@ -8,9 +8,7 @@
         <tr>
             <td><label for="name">SEO (Description):</label></td>
             <td>
-                <textarea name="description" class="smallInput medium" style="height: 80px;">
-                    <?=$object->description;?>
-                </textarea>
+                <textarea name="description" class="smallInput medium" style="height: 80px;"><?=$object->description;?></textarea>
             </td>
         </tr>
         <tr>

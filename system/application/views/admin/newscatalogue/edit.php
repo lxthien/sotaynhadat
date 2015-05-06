@@ -16,9 +16,7 @@
 		<label for="name">Title:</label>
         <input type="text" name="title_bar" value="<?=$object->title_bar;?>" class="smallInput wide" />
         <label for="name">Description:</label>
-        <textarea name="slogan" class="smallInput wide" style="height: 80px;">
-            <?=$object->slogan;?>
-        </textarea>
+        <textarea name="slogan" class="smallInput wide" style="height: 80px;"><?=$object->slogan;?></textarea>
         <!--<input type="text" name="slogan" value="<?/*=$object->slogan;*/?>" class="smallInput wide" />-->
         <label for="name">Keyword:</label>
         <input type="text" name="keyword" value="<?=$object->keyword;?>" class="smallInput wide" />     

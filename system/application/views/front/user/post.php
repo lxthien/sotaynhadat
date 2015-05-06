@@ -618,7 +618,9 @@ function load_district()
                                                 {
                                                     toolbar: [],
                                                     height: 200,
-                                                    resize_enabled: false
+                                                    resize_enabled: false,
+													htmlEncodeOutput: false,
+                                                    entities: false
                                                 });
                                         </script>
                                     </span> <span> </span>
