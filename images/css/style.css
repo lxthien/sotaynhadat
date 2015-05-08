@@ -1631,7 +1631,7 @@ p.notice-msg{
 .sreentindb .noidung p.row span.area{background-color: #0f9502; border-radius: 4px; color: #ffffff;padding: 3px 10px;text-align: center; margin-right: 5px;}
 .sreentindb .noidung p.row span.price{background-color: #ee0e0e; border-radius: 4px; color: #ffffff;padding: 3px 10px;text-align: center;}
 .sreentindb .noidung p.row span.phone{float: right; padding: 3px 0;margin-top: 6px; display: none;}
-.sreentindb .noidung p.des{text-align:justify;color:#49395e; line-height: 18px;}
+.sreentindb .noidung p.des{text-align:justify;color:#49395e; line-height: 18px; height: 55px; overflow: hidden;}
 
 .vip{background-color: #fbfbfb;position: relative;border: 1px solid #6fbf67;}
 .sreentindb .icon-vip{position: absolute; top: 0px; right: 10px; z-index: 100;}
