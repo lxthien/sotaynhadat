@@ -509,8 +509,25 @@ class estates extends MY_Controller{
     {
         $id = $this->uri->segment(4);
         $estate = new Estate($id);
+
+        // detele photo default
+        $pathImageDefault = $_SERVER['DOCUMENT_ROOT'].'/'.$estate->photo;
+        unlink($pathImageDefault);
+
+        // delete photo project
+        $photos = new Estate_photo();
+        $photos->where('estate_id', $estate->id);
+        $photos->get();
+
+        foreach ($photos as $row) {
+            $pathImage = $_SERVER['DOCUMENT_ROOT'].'/'.$row->name;
+            unlink($pathImage);
+        }
+
+
         $estate->delete();
         flash_message('success','Xóa Tin bất động sản thành công');
+        
         if( $this->uri->segment(5) == 'user' )
             redirect($this->admin.'estateusers/listEstates/'.$this->uri->segment(6));
         if( $this->uri->segment(5) == 'free' )

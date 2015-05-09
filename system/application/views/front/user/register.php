@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?php echo $base_url.'images/css/style-new-282015.css'; ?>"/>
 <link type="text/css" href="<?=$base_url;?>images/js/jqueryui/css/smoothness/jquery-ui-1.8.24.custom.css" rel="stylesheet" />
 <script type="text/javascript" src="<?=$base_url;?>images/js/jqueryui/js/jquery-ui-1.8.24.custom.min.js"></script>
 <script type="text/javascript" src="<?=$base_url;?>images/js/jquery.validate.js?v1"></script>
@@ -42,8 +43,11 @@
                 repassword:{
                     equalTo: ':input[name="password"]'
                 },
-                address:{
+                estatecity_id:{
                     required:true
+                },
+                estatedistrict_id: {
+                    required: true
                 },
                 country:{
                     required: true
@@ -76,11 +80,14 @@
                 repassword:{
                     equalTo:"Nhập trùng với mật khẩu."
                 },
-                address:{
-                    required: 'Vui lòng nhập địa chỉ'
+                estatecity_id:{
+                    required: 'Vui lòng chọn thành phố'
+                },
+                estatedistrict_id: {
+                    required: 'Vui lòng chọn huyện'
                 },
                 agree:{
-                    required: 'Vui lòng đồng ý'
+                    required: 'Vui lòng đồng ý quy định'
                 },
                 mobile:{
                     required: 'Vui lòng nhập di động',
@@ -95,10 +102,9 @@
         position: relative;
     }
 </style>
-<div class="linktop" style=" width:600px;height:20px; float:left; margin-top:8px; margin-left:25px; margin-bottom:10px; ">
-    <div class="link" style="margin-left:10px; width:auto; float:left;"><a href="<?=$base_url;?>">Trang chủ</a></div>
-    <p style="float:left; margin-left:5px; margin-right:5px;">-</p>
-    <div class="link" style=" width:auto; float:left;"><a href="<?=$base_url;?>dang-ky">Đăng ký</a></div>
+<div class="linktop" style="width:960px;height:20px; float:left; margin-top:12px; margin-bottom:0px;">
+    <div class="linkdautrang" style="margin-left:5px; width:auto; float:left;"><a href="<?=$base_url;?>">Trang chủ</a></div>
+    <div class="linkdautrang" style=" width:auto; float:left;"><a class="linkdautrang-active" href="<?=$base_url;?>dang-ky">Đăng ký</a></div>
 </div>
 <div class="main" style="width:960px;float:left;margin-top:5px; margin-left:12px; ">
     <?php if(!empty($msg)): ?>
@@ -145,33 +151,34 @@
                     </div>
                 </div>
                 <div class="form">
-                    <p style="font-size:13px;font-weight:bold;">Địa chỉ: <span style="display: inline-block; color: red;">(*)</span></p>
+                    <p style="font-size:13px;font-weight:bold;">Địa chỉ:</p>
                     <input name="address" value="<?=$o->address;?>" type="text" style="border:1px #a7a7a7 solid; width:395px; padding-left: 5px; color: #555555; height:26px; margin-top:3px;" />
                 </div>
-                <div class="form">
-                    <div class="address-left" style="width: 195px; float: left; margin-right: 10px;">
-                        <p style="font-size:13px;font-weight:bold; margin-bottom: 3px;">Tỉnh/TP:</p>
-                        <select name="estatecity_id" id="estatecity_id" style="width: 195px; color: #555;">
+                <div class="row-full-register">
+                    <div class="form">
+                        <p style="font-size:13px;font-weight:bold; margin-bottom: 3px;">Tỉnh/TP: <span style="display: inline-block; color: red;">(*)</span></p>
+                        <select name="estatecity_id" id="estatecity_id" style="width: 197px; color: #555; height: 25px; line-height: 25px;">
                             <option value="">Chọn Tỉnh/Thành phố</option>
                             <?php foreach($this->estateProvince as $row): ?>
                                 <option <?php if($o->estatecity_id == $row->id) echo 'selected="selected"'; ?> value="<?=$row->id?>"><?=$row->name;?></option>
                             <?php endforeach; unset($row); ?>
                         </select>
                     </div>
-                    <div class="address-right" style="width: 195px; float: left;">
-                        <p style="font-size:13px;font-weight:bold; margin-bottom: 3px;">Quận/Huyện:</p>
+                    <div class="form" style="padding-left: 5px;">
+                        <p style="font-size:13px;font-weight:bold; margin-bottom: 3px;">Quận/Huyện: <span style="display: inline-block; color: red;">(*)</span></p>
                         <input type="hidden" name="estatedistrict_selected" value="<?=$o->estatedistrict_id;?>"/>
-                        <select name="estatedistrict_id" id="estatedistrict_id" style="width: 195px; color: #555;">
+                        <select name="estatedistrict_id" id="estatedistrict_id" style="width: 197px; color: #555; height: 25px; line-height: 25px;">
                             <option value="">Chọn Quận/Huyện</option>
                         </select>
                     </div>
-                </div>                <div class="form">
-                    <p style="font-size:13px;font-weight:bold; float:left; line-height: 40px;">Mã xác nhận: </p>
+                </div>
+                <div class="form">
+                    <p style="font-size:13px;font-weight:bold;line-height: 25px;">Mã xác nhận: </p>
                     <div class="maxacnhan">
                         <img id="captcha" height="40" width="200" src="<?=$base_url;?>securimage/securimage_show.php" alt="CAPTCHA Image" />
                     </div>
                     <a href="javascript:void(0)" onclick="document.getElementById('captcha').src = '<?=$base_url;?>/securimage/securimage_show.php?' + Math.random(); return false">
-                        <img alt="Refresh" width="20" height="20" style="margin-top: 12px;" src="<?=$base_url?>images/refresh.png"/>
+                        <img alt="Refresh" width="20" height="20" style="margin-top: 20px; margin-left: -18px;" src="<?=$base_url?>images/refresh.png"/>
                     </a>
                 </div>
                 <div class="form">

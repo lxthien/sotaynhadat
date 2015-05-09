@@ -423,18 +423,18 @@ a:active {
     text-decoration: none;
 }
 
-.left{width:645px; float:left; margin-right:0px; border-right: 1px solid #cccccc;}
+.left{width:660px; float:left; margin-right:0px; border-right: 1px solid #cccccc;}
 .left.home-page{border-right: 1px solid #ffffff;}
 .left2{width:751px; float:left; }
 .right{width:300px; float:right; margin-right: 0px;}
 .right2{width:170px;  float:right; margin-right:17px; }
 
-.left .hotnew .boxnew{width:624px; float:left; margin-top:10px;}
+.left .hotnew .boxnew{width:640px; float:left; margin-top:10px;}
 
 .estates .hotnew{border-top: none;}
 
-.hotnew{ border:1px  #CCCCCC solid;float:left; width:624px; margin-left:10px; margin-bottom:10px;}
-.hotnew2{ border: 1px #CCCCCC solid;float:left; width:751px; margin-left:15px; margin-bottom:10px;}
+.hotnew{border:1px  #CCCCCC solid;float:left; width:640px; margin-left:10px; margin-bottom:10px;}
+.hotnew2{border: 1px #CCCCCC solid;float:left; width:751px; margin-left:15px; margin-bottom:10px;}
 
 .tinrao {border: 1px #CCCCCC  solid;float:left; width:610px;  margin-left:15px; margin-top:10px; margin-bottom:5px;}
 .tieude a{  height:20px;  color:#333333; font-size:13px; font-weight:bold;}
@@ -471,7 +471,7 @@ a:active {
 .icon5{ background:url(../icon1.png); margin-left:5px; margin-right:5px; float:left; width:6px; height:10px; margin-top:9px; }
 .icon6{ background:url(../icon4.png); margin-right:5px; width:27px; height:25px; float:left;}
 .icon7{ background:url(../icon3.png); margin-right:5px; width:27px; height:22px; float:left;}
-.line{ float:left; width:622px; margin-bottom:8px; border-bottom: 1px dotted #afafaf;}
+.line{ float:left; width:638px; margin-bottom:8px; border-bottom: 1px dotted #afafaf;}
 .line.line-vip{border-bottom: 1px dotted #ffffff;}
 .line1{ float:left; width:560px; height:1px; background-color:#CCCCCC; margin-left:20px; margin-bottom:5px; margin-top:5px;}
 .line2{ float:left; width:610px; height:1px; background-color:#666666; margin-bottom:12px;}
@@ -908,8 +908,8 @@ label.error {
 .linksite a:hover { font-size:14px;  float:left; color:#0066CC;}
 .linksite2 a { font-size:15px; font-weight:bold;  float:left; color:#333333;}
 .linksite2 a:hover { font-size:15px; font-weight:bold;  float:left; color:#0066CC;}
-.maxacnhan{float:left; width:220px; margin-left:10px; height:50px; }
-.maxacnhan img{ width:200px; float:left; margin-left:10px; height:40px; }
+.maxacnhan{float:left; width:220px; height:50px; }
+.maxacnhan img{width:200px; float:left; height:40px; }
 .butondk input[type="submit"] {background:url(../butondk.png); width:96px; height:35px; float:left; margin-left:110px; border: none; cursor: pointer;}
 .butondk input[type="submit"]:hover{background:url(../butondk2.png); width:96px; height:35px; float:left; margin-left:110px;}
 .butondn a {background:url(../butondn.png); width:99px; height:34px; float:left; margin-left:90px;}
@@ -1302,13 +1302,13 @@ label.error {
     margin-left: 10px;
 }
 .home-page .hotnew{
-    width: 635px;
+    width: 645px;
 }
 .home-page .hotnew .sreentindb{
-    width: 635px;
+    width: 645px;
 }
 .home-page .qc-home-page, .home-page .tinrao{
-    width: 635px; margin-left: 10px;
+    width: 645px; margin-left: 10px;
 }
 .home-page .qc-home-page img{
     width: 100%;
@@ -1320,12 +1320,12 @@ label.error {
     margin-bottom: 15px;
 }
 .home-page .tinrao .boxtinrao, .home-page .tinrao .boxtinrao2{
-    width: 635px; height: 62px;
+    width: 645px; height: 62px;
 }
 
 .home-page .tinrao .tieuderao a{
     font-weight: 400; font-size: 14px; height: 18px; color: #232323; margin-left: 10px; margin-top: 8px; float: left;
-    width: 625px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    width: 635px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 
 .home-page .tinrao .boxtinrao:hover .tieuderao a, 
@@ -1561,10 +1561,10 @@ p.notice-msg{
 
 
 .boxnew .sreentindb .sreenboxnew .noidung{
-	width: 445px;
+	width: 462px;
 }
 .hotnew .sreentindb .sreenboxnew .noidung{
-    width: 445px; margin-top: 3px; height:125px; float:left; margin-top:3px;
+    width: 462px; margin-top: 3px; height:125px; float:left; margin-top:3px;
 }
 
 
@@ -1614,7 +1614,7 @@ p.notice-msg{
 
 .news-related h3{color: #292929; font-size: 18px; font-family: Helvetica,Arial,sans-serif; font-weight: 600; border-bottom: 1px solid #000000; padding-bottom: 5px; margin-bottom: 10px; margin-top: 30px;}
 
-.sreentindb{width:622px;float:left;margin-bottom:1px;height: 165px;position: relative;border: 1px solid #ffffff;}
+.sreentindb{width:638px;float:left;margin-bottom:1px;height: 165px;position: relative;border: 1px solid #ffffff;}
 .sreentindb .boxhinh{margin-left: 8px; width: 150px; height: 120px; margin-top: 5px;}
 .sreentindb .noidung p.row{line-height: 22px; height: 22px; margin-bottom: 5px;}
 .sreentindb .noidung p.row-2{line-height: 20px; padding: 5px 0;}
